@@ -1,0 +1,95 @@
+body{
+	background-image: url("https://s2.best-wallpaper.net/wallpaper/1920x1080/1202/Red-blood-cells_1920x1080.jpg");
+	/*background-size: 1920px 1090px ;*/
+	color: white;
+}
+div.jumbotron-fluid{
+	margin-bottom: 0px;
+	padding: 10px 20px 10px 20px;
+	/*background-color: #FF0000;*/
+	background-color: red;
+	border-width: 0px 0px 2px 0px;
+	border-color: black;
+	border-style: solid;
+}
+div.jumbotron-fluid h1{
+	font-weight: 400;
+	color: white;
+}
+
+nav div button.btn{
+	color:white;
+	background-color: red	;
+	margin-right: 5px;
+	height: 2em;
+	margin-bottom: 0.4em;
+}
+nav div button span{
+	/*margin-bottom: 1em;*/
+}
+nav div button.btn:hover{
+	background-color: white	;
+}
+div.container-fluid{
+	/*background-color: grey;*/
+	padding: 0px 0px 0px 0px;
+}
+div.container-fluid img{
+	width: 100%;
+	height: auto;
+}
+#carousel-container img{
+	width: 100%;
+	max-height: 35em;
+}
+form input{
+	padding-left: 10px;
+	padding-right: 10px;
+}
+/*div.container-fluid.col-6{
+	background-color: lightblue;
+}
+input, label{
+	display: block;
+}*/
+/*div.col-6 form input{
+	margin: 5px 5px 5px 5px;
+	margin-top: 5px;
+}*/
+div.col-4.container-fluid{
+/*	max-width: 26em;*/
+	/*margin-right: 7.5em;*/
+	margin-top: 1em;
+	/*background-image: url("https://scx1.b-cdn.net/csz/news/800/2019/4-blood.jpg");*/
+}
+
+#margin_spacer{
+	margin-left: 5px;
+	/*margin-right: 5px;*/
+	margin-top: 10px;
+	margin-bottom: 5px;
+}
+
+input.btn{
+	margin-top: 3px;
+}
+select#margin_spacer{
+	margin-top: 6px;
+	margin-left: 25px;
+	margin-right: 0px;
+	margin-bottom: 8px;
+}
+div div#margin_spacer{
+	margin-top: 2px;
+	margin-left: 25px;
+	margin-bottom: 0px;
+}
+body h6{
+	color: #90949c;
+}
+body textarea.form-control{
+	max-width: 81%;
+}
+body input.form-control{
+	max-width: 81%;
+}
