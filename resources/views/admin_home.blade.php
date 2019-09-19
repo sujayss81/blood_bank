@@ -10,113 +10,85 @@
     <link rel='stylesheet' type='text/css' href="{{asset('bootstrap/css/admin_home_style.css')}}">
     <script src="{{ asset('bootstrap/js/jquery.min.js' )}}"></script>
     <script src="{{ asset('bootstrap/js/bootstrap.js' )}}"></script>   
-    <script src="{{ asset('bootstrap/js/admin_home.js' )}}"></script>   
 </head>
 <body>
-		<!-- NAVBAR -->
-		<div class="container-flex col-12 float-right">
-   			<nav class="navbar navbar-expand navbar-light bg-light">
-   				<a class="navbar-brand" href="admin_home">Blood Bank</a>
-   				<ul class="navbar-nav mr-auto">
-   					<li class="nav-item active">
-   						<a class="nav-link">Home</a>
-   					</li>
-   					<li class="nav-item">	
-   						<a class="nav-link" href="#">Profile</a>
-   					</li>	
-   				</ul>
-   				<a class="" href="#">LOGOUT</a>
-   			</nav>
-		</div>
-		<!-- ----------------------------------------------------------------- -->
-		<!-- SideNav -->
-		<div class="container-flex col-2 float-left">
-			<img src="https://www.sgbt.lu/uploads/tx_bisgbio/default-profile_01.png">
-			<h5>Hello  Admin</h5>
-			<hr>
-			<ul class="nav flex-column">
-				<li class="nav-item">
-					<a class="nav-link active">Home</a>
+		<!-- NavBar -->
+		<nav class="navbar navbar-expand navbar-light bg-light">
+			<h1 class="navbar-brand">Blood Bank</h1>
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active">
+					<a class ="nav-link" href="#"><h5>Home</h5></a>
 				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Add Donors</a>
+				<li class="nav-item ">
+					<a class ="nav-link" href="#"><h5>ND</h5></a>
 				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Add Hospital Details</a>
+				<li class="nav-item ">
+					<a class ="nav-link" href="#"><h5>Manage Donors</h5></a>
 				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">View Summary</a>
+				<li class="nav-item ">
+					<a class ="nav-link" href="#"><h5>Blood Quantity</h5></a>
 				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">View Blood Quantity</a>
+				<li class="nav-item ">
+					<a class ="nav-link" href="#"><h5>View Donors</h5></a>
 				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">View Monthly Transactions</a>
+				<li class="nav-item ">
+					<a class ="nav-link" href="#"><h5>View Donations</h5></a>
 				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">View Monthly Donor Details</a>
+				<li class="nav-item ">
+					<a class ="nav-link" href="#"><h5>Hospital Transactions</h5></a>
 				</li>
 			</ul>
-			<button class="btn btn-danger">Logout</button>
-		</div>
-		<!-- ----------------------------------------------------------------- -->
-		<div class="container-flex col-10 float-right">
-			<div class="row top-row">
-				<div class="col-4">
-					<div class="card">
-						<div class="card-body">
-							<h5 class="card-title">Add Donors</h5>
-							<p class="card-text">Lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor</p>
-							<a href="#" class="btn btn-primary">Add Donor</a>
-						</div>
-					</div>
+			<a class="nav-link" href="#"><h5>Logout</h5></a>
+		</nav>
+		<!-- ------------------------------------------------------------- -->
+		<span><h5>Admin Panel</h5></span>
+		<div class="container-fluid col-9">
+			<div class="row">
+				<div class="card col-4">
+				  <div class="card-body">
+				    <h5 class="card-title">ND</h5>
+				    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+				    <a href="#" class="btn btn-primary">ND</a>
+				  </div>
 				</div>
-				<div class="col-4">
-					<div class="card">
-						<div class="card-body">
-							<h5 class="card-title">Add Hospital Details</h5>
-							<p class="card-text">Lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor</p>
-							<a href="#" class="btn btn-primary">Add Hospital</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-4">
-					<div class="card">
-						<div class="card-body">
-							<h5 class="card-title">View Summary</h5>
-							<p class="card-text">Lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor</p>
-							<a href="#" class="btn btn-primary">View Summary</a>
-						</div>
-					</div>
+				<div class="card col-4">
+				  <div class="card-body">
+				    <h5 class="card-title">Manage Donors</h5>
+				    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+				    <a href="#" class="btn btn-primary">Update</a>
+				  </div>
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-4">
-					<div class="card">
-						<div class="card-body">
-							<h5 class="card-title">View Blood Quantity</h5>
-							<p class="card-text">Lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor</p>
-							<a href="#" class="btn btn-primary">View Blood Quantity</a>
-						</div>
-					</div>
+				<div class="card col-4">
+				  <div class="card-body">
+				    <h5 class="card-title">View Blood Quantity</h5>
+				    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+				    <a href="#" class="btn btn-primary">View Quantity</a>
+				  </div>
 				</div>
-				<div class="col-4">
-					<div class="card">
-						<div class="card-body">
-							<h5 class="card-title">View Monthly Transactions</h5>
-							<p class="card-text">Lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor</p>
-							<a href="#" class="btn btn-primary">View Transactions</a>
-						</div>
-					</div>
+				<div class="card col-4">
+				  <div class="card-body">
+				    <h5 class="card-title">View All Donors</h5>
+				    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+				    <a href="#" class="btn btn-primary">View Donors</a>
+				  </div>
 				</div>
-				<div class="col-4">
-					<div class="card">
-						<div class="card-body">
-							<h5 class="card-title">View Monthly Donor Details</h5>
-							<p class="card-text">Lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor</p>
-							<a href="#" class="btn btn-primary">View Monthly Donors</a>
-						</div>
-					</div>
+			</div>
+			<div class="row">
+				<div class="card col-4">
+				  <div class="card-body">
+				    <h5 class="card-title">View All Donations</h5>
+				    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+				    <a href="#" class="btn btn-primary">View Donations</a>
+				  </div>
+				</div>
+				<div class="card col-4">
+				  <div class="card-body">
+				    <h5 class="card-title">Add Hospital Transactions</h5>
+				    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+				    <a href="#" class="btn btn-primary">Add Transaction</a>
+				  </div>
 				</div>
 			</div>
 		</div>

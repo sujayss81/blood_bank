@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/admin_home',function(){
+Route::get('/donor_home',function(){
+	return view('donor_home');
+});
+
+Route::get('/admin_home', function(){
 	return view('admin_home');
 });
