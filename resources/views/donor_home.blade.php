@@ -35,9 +35,9 @@
 			<h5>Hello  Donor</h5>
 			<hr>
 			<ul class="nav flex-column">
-				<li class="nav-item">
+			<!-- 	<li class="nav-item">
 					<a class="nav-link active">Home</a>
-				</li>
+				</li> -->
 				<li class="nav-item">
 					<a class="nav-link" href="#">View All My Donations</a>
 				</li>
