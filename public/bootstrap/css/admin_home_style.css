@@ -8,11 +8,22 @@ span > h5{
 	margin-top: 5px;
 	color: red;
 }
-a:hover{
+/*a:hover{
+	color: gray;
+	cursor: pointer;
+}*/
+/*a{
+	color: gray;
+}*/
+a.logout h5{
+	color: red;
+}
+a.logout h5:hover{
 	color: black;
 }
-a{
-	color: gray;
+a h5:hover{
+	color: #002199;
+	cursor: pointer;
 }
 .navbar-nav{
 	margin-left: 8%;

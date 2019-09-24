@@ -38,7 +38,7 @@
 					<a class ="nav-link" href="#"><h5>Hospital Transactions</h5></a>
 				</li>
 			</ul>
-			<a class="nav-link" href="#"><h5>Logout</h5></a>
+			<a class="nav-link logout" onclick="confirmlogout()"><h5>Logout</h5></a>
 		</nav>
 		<!-- ------------------------------------------------------------- -->
 		<span><h5>Admin Panel</h5></span>
@@ -92,5 +92,15 @@
 				</div>
 			</div>
 		</div>
+		<script type="text/javascript">
+			function confirmlogout(){
+				var res = confirm("You are about to logout!!");
+				if(res)
+				{
+					window.location = '/admin_logout';
+				}
+
+			}
+		</script>
 </body>
 </html>

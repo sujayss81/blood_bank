@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class DonorTableMigration extends Migration
+class CreateAdminauthTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class DonorTableMigration extends Migration
      */
     public function up()
     {
-        Schema::create('donor', function (Blueprint $table) {
-            $table->bigIncrements('donor_id');
-            // $table->timestamps();
-            $table->primary('donor_id');
+        Schema::create('adminauth', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string("username");
+            $table->string("password");
         });
     }
 
@@ -27,6 +27,6 @@ class DonorTableMigration extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('donor');
+        Schema::dropIfExists('adminauth');
     }
 }

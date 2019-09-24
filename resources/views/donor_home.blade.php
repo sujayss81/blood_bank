@@ -54,7 +54,7 @@
 					<a class="nav-link" href="#">View Blood Information</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">Total Money Earned</a>
+					<a class="nav-link" href="#">Update Profile</a>
 				</li>
 			</ul>
 			<button class="btn btn-danger">Logout</button>
@@ -112,9 +112,9 @@
 				<div class="col-4">
 					<div class="card">
 						<div class="card-body">
-							<h5 class="card-title">Total Money Earned</h5>
+							<h5 class="card-title">Update My Profile</h5>
 							<p class="card-text">Lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor</p>
-							<a href="#" class="btn btn-primary">View Total Money</a>
+							<a href="#" class="btn btn-primary">Update</a>
 						</div>
 					</div>
 				</div>
