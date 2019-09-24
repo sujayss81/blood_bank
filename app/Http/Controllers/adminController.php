@@ -21,7 +21,7 @@ class adminController extends Controller
     		}
     		else
     		{
-    			return redirect('/admin_login')->with('wp','Incorrect Username/Password');
+    			return redirect('/admin_login')->with('status','Incorrect Username/Password');
     		}
     }
 

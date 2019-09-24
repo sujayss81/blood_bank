@@ -23,15 +23,10 @@
 	  			<div class="text-center">
 	  				<input type="submit" name="login" value="Login" class="btn btn-primary">
 	  			</div>
-	  		   @if (session('wp'))
+	  		   @if (session('status'))
    			   <div class="alert alert-danger">
-      				  {{ session('wp') }}
+      				  {{ session('status') }}
   			   </div>
-			   @endif
-			   @if(session('ua'))
-			   			<div class="alert alert-danger">
-			   				{{session('ua')}}
-			   			</div>
 			   @endif
 	  		</form>
 	  </div>

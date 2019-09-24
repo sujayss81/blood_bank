@@ -14,9 +14,15 @@ class DonorTableMigration extends Migration
     public function up()
     {
         Schema::create('donor', function (Blueprint $table) {
-            $table->bigIncrements('donor_id');
+            $table->integer('id')->autoIncrement();
             // $table->timestamps();
-            $table->primary('donor_id');
+            $table->string('fname')->nullable(false);
+            $table->string('lname')->nullable(false);
+            $table->date('dob')->nullable(false);
+            $table->string('gender')->nullable(false);
+            $table->string('address')->nullable(false);
+            $table->integer('contact')->nullable(false);
+            $table->string('password')->nullable(false);
         });
     }
 

@@ -25,14 +25,16 @@
    						<a class="nav-link" href="#">Profile</a>
    					</li>	
    				</ul>
-   				<a class="" href="#">LOGOUT</a>
+   				<a onclick="confirmLogout()">LOGOUT</a>
    			</nav>
 		</div>
 		<!-- ----------------------------------------------------------------- -->
 		<!-- SideNav -->
 		<div class="container-flex col-2 float-left">
 			<img src="https://www.sgbt.lu/uploads/tx_bisgbio/default-profile_01.png">
-			<h5>Hello  Donor</h5>
+			@foreach($res as $value)
+			<h5>Hello  {{$value->fname}}</h5>
+			@endforeach
 			<hr>
 			<ul class="nav flex-column">
 			<!-- 	<li class="nav-item">
@@ -57,7 +59,7 @@
 					<a class="nav-link" href="#">Update Profile</a>
 				</li>
 			</ul>
-			<button class="btn btn-danger">Logout</button>
+			<button class="btn btn-danger" onclick="confirmLogout()">Logout</button>
 		</div>
 		<!-- ----------------------------------------------------------------- -->
 		<div class="container-flex col-10 float-right">
@@ -120,5 +122,15 @@
 				</div>
 			</div>
 		</div>
+		<script type="text/javascript">
+			function confirmLogout(){
+				var res = confirm("You are about to logout!!");
+				if(res)
+				{
+					window.location = '/admin_logout';
+				}
+
+			}
+		</script>
 </body>
 </html>

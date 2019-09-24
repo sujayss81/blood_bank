@@ -29,13 +29,19 @@
             </ul>
             <div class="btn-group ">
                 <!-- <button class="btn  rounded" type="submit">Register</button> -->
-                <form>
+                <form method="POST" action="/donor_auth"> 
+                @csrf
                 <input type="text" name="username" placeholder="Username">
                 <input type="password" name="password" placeholder="Password">
                 <button class="btn  rounded" type="submit"><span>Login</span></button>
                 </form>
             </div>
      </nav>
+    @if(session('status'))
+        <div class="alert alert-danger col-12">
+            {{ session('status') }}
+        </div>
+    @endif
     <!------------------------------------------------------------------------------------->
   <!--   <div id="carousel-container float-left">
         <div id="my-slider" class="carousel slide" data-ride="carousel">
