@@ -21,7 +21,7 @@ class DonorTableMigration extends Migration
             $table->date('dob')->nullable(false);
             $table->string('gender')->nullable(false);
             $table->string('address')->nullable(false);
-            $table->integer('contact')->nullable(false);
+            $table->biginteger('contact')->nullable(false);
             $table->string('password')->nullable(false);
         });
     }

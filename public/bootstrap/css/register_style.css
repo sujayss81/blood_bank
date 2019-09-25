@@ -1,0 +1,17 @@
+div.message{
+	border-style: solid;
+	margin-top: 15%;
+	border: 2px 2px 2px 2px;
+	box-sizing: border-box;
+	box-shadow: 2px 2px 2px 2px;
+}
+div.text-center a:hover{
+	text-decoration: none;
+	color: black;
+}
+div.text-center{
+	margin-top: 7px;
+}
+div.text-center a{
+	color: grey;
+}

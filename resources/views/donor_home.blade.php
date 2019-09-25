@@ -127,7 +127,7 @@
 				var res = confirm("You are about to logout!!");
 				if(res)
 				{
-					window.location = '/admin_logout';
+					window.location = '/donor_logout';
 				}
 
 			}

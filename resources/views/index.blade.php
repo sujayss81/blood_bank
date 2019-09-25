@@ -83,20 +83,21 @@
         <!-- <img src="https://scx1.b-cdn.net/csz/news/800/2019/4-blood.jpg" width="900" height="600"> -->
     
     <div class="container-fluid col-4 float-right">
-        <form>
+        <form method="POST" action="/register">
+            @csrf
             <h1>Register with us</h1>
             <h5>Happy donating</h5>
             <div class="form-row">
-            <div class="form-col">
-            <input type="text" name="fname" class="form-control" id="margin_spacer" placeholder="First Name">
-            </div>
-            <div class="form-col">
-            <input type="text" name="lname" class="form-control" placeholder="Last Name" id="margin_spacer">
-            </div>
+                <div class="form-col">
+                    <input type="text" name="fname" class="form-control" id="margin_spacer" placeholder="First Name">
+                </div>
+                <div class="form-col">
+                    <input type="text" name="lname" class="form-control" placeholder="Last Name" id="margin_spacer">
+                </div>
             </div>
             <div class="form-row">
                 <!-- <div class="form-col"> -->
-                <textarea  rows="4" cols="30" placeholder="Address" id="margin_spacer" class="form-control"></textarea>
+                <textarea  rows="4" cols="30" placeholder="Address" name="address" id="margin_spacer" class="form-control"></textarea>
                 <!-- </div> -->
             </div>
             <div class="form-row">
@@ -106,13 +107,13 @@
             </div>
             <div class="form-row">
                 <!-- <div class="form-col"> -->
-                <input type="password" name="user_password" placeholder="New Password" id="margin_spacer" class="form-control">
+                <input type="password" name="password" placeholder="New Password" id="margin_spacer" class="form-control">
                 <!-- </div> -->
             </div>
             <h6>Date of Birth</h6>
             <div class="form-row">
             <div class="form-col">
-            <select class="form-control" id="margin_spacer">
+            <select class="form-control" id="margin_spacer" name="day">
                 <option>Day</option>
                 <option>1</option>
                 <option>2</option>
@@ -148,7 +149,7 @@
             </select>
             </div>
             <div class="form-col">
-                <select class="form-control" id="margin_spacer">
+                <select class="form-control" id="margin_spacer" name="month">
                     <option>Month</option>
                     <option>Janaury</option>
                     <option>Febraury</option>
@@ -165,7 +166,7 @@
                 </select>
             </div>
             <div class="form-col">
-                <select class="form-control" id="margin_spacer">
+                <select class="form-control" id="margin_spacer" name="year">
                     <option>Year</option>
                     <option>1920</option>
                     <option>1921</option>

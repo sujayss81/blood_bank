@@ -32,3 +32,5 @@ Route::post('/admin_auth','adminController@auth');
 Route::get('/admin_logout','adminController@logout');
 Route::post('/donor_auth','donorController@auth');
 Route::get('/donor_logout','donorController@logout');
+Route::post('/register','donorController@register');
+Route::view('/suc_register','suc_register');

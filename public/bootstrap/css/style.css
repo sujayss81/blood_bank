@@ -98,3 +98,7 @@ body input.form-control{
 .navbar-nav > li{
 	padding-left: 20px;
 }
+
+/*form + div.form-row{
+	max-width: 80%;
+}*/
