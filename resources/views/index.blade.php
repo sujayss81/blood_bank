@@ -274,15 +274,15 @@
         <h6>Gender</h6>
         <div class="form-row">
             <div class="form-col" id="margin_spacer">
-                <input type="radio" name="gender">
+                <input type="radio" name="gender" value="Male">
                 <label for="male">Male</label>
             </div>
             <div class="form-col" id="margin_spacer">
-                <input type="radio" name="gender">
+                <input type="radio" name="gender" value="Female">
                 <label for="female">Female</label>
             </div>
             <div class="form-col" id="margin_spacer">
-                <input type="radio" name="gender">
+                <input type="radio" name="gender" value="Other">
                 <label for="other">Other</label>
             </div>
         </div>

@@ -23,7 +23,7 @@
 					<a class ="nav-link" href="#"><h5>ND</h5></a>
 				</li>
 				<li class="nav-item ">
-					<a class ="nav-link" href="#"><h5>Manage Donors</h5></a>
+					<a class ="nav-link" href="/manage_donor"><h5>Manage Donors</h5></a>
 				</li>
 				<li class="nav-item ">
 					<a class ="nav-link" href="#"><h5>Blood Quantity</h5></a>
@@ -55,7 +55,7 @@
 				  <div class="card-body">
 				    <h5 class="card-title">Manage Donors</h5>
 				    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-				    <a href="#" class="btn btn-primary">Update</a>
+				    <a href="/manage_donor" class="btn btn-primary">Update</a>
 				  </div>
 				</div>
 			</div>

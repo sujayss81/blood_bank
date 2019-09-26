@@ -34,3 +34,5 @@ Route::post('/donor_auth','donorController@auth');
 Route::get('/donor_logout','donorController@logout');
 Route::post('/register','donorController@register');
 Route::view('/suc_register','suc_register');
+Route::get('/manage_donor','adminController@manage')->middleware('check_al_status');
+Route::get('/delete_donor/{id}','adminController@delete')->middleware('check_al_status');
