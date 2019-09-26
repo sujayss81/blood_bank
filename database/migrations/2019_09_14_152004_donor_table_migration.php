@@ -15,7 +15,6 @@ class DonorTableMigration extends Migration
     {
         Schema::create('donor', function (Blueprint $table) {
             $table->integer('id')->autoIncrement();
-            // $table->timestamps();
             $table->string('fname')->nullable(false);
             $table->string('lname')->nullable(false);
             $table->date('dob')->nullable(false);
