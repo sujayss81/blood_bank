@@ -17,7 +17,7 @@
 			<h1 class="navbar-brand">Blood Bank</h1>
 			<ul class="navbar-nav mr-auto">
 				<li class="nav-item active">
-					<a class ="nav-link" href="#"><h5>Home</h5></a>
+					<a class ="nav-link" href="/admin_home"><h5>Home</h5></a>
 				</li>
 				<li class="nav-item ">
 					<a class ="nav-link" href="/add_donation"><h5>Add Donation</h5></a>
@@ -26,7 +26,7 @@
 					<a class ="nav-link" href="/manage_donor"><h5>Manage Donors</h5></a>
 				</li>
 				<li class="nav-item ">
-					<a class ="nav-link" href="#"><h5>Blood Quantity</h5></a>
+					<a class ="nav-link" href="/view_donation"><h5>View Donations</h5></a>
 				</li>
 				<li class="nav-item ">
 					<a class ="nav-link" href="#"><h5>View Donors</h5></a>
@@ -62,9 +62,9 @@
 			<div class="row">
 				<div class="card col-4">
 				  <div class="card-body">
-				    <h5 class="card-title">View Blood Quantity</h5>
+				    <h5 class="card-title">View Donations from all donors</h5>
 				    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-				    <a href="#" class="btn btn-primary">View Quantity</a>
+				    <a href="/view_donation" class="btn btn-primary">View Donations</a>
 				  </div>
 				</div>
 				<div class="card col-4">

@@ -22,11 +22,11 @@
 				<li class="nav-item ">
 					<a class ="nav-link" href="/add_donation"><h5>Add Donation</h5></a>
 				</li>
-				<li class="nav-item active">
-					<a class ="nav-link" href="/manage_donors"><h5>Manage Donors</h5></a>
-				</li>
 				<li class="nav-item ">
-					<a class ="nav-link" href="/view_donation"><h5>View Donation</h5></a>
+					<a class ="nav-link" href="/manage_donor"><h5>Manage Donors</h5></a>
+				</li>
+				<li class="nav-item active">
+					<a class ="nav-link" href="/view_donation"><h5>View Donations</h5></a>
 				</li>
 				<li class="nav-item ">
 					<a class ="nav-link" href="#"><h5>View Donors</h5></a>
@@ -43,33 +43,24 @@
 		<!-- ------------------------------------------------------------- -->
 		<span><h5>Admin Panel</h5></span>
 		<div class="container-fluid col-9">
-			@if(session('status'))
-				<div class="alert alert-danger text-center">
-					 {{session('status')}}
-				</div>
-			@endif
 			<table class="table table-striped table-hover text-center table-bordered">
 				<thead>
 					<tr>
-						<th>Donor id</th>
-						<th>First Name</th>
-						<th>Last Name</th>
-						<th>Gender</th>
-						<th>Address</th>
-						<th>Contact</th>
-						<th>Action</th>
+						<th>ID</th>
+						<th>Donor ID</th>
+						<th>Blood Group</th>
+						<th>Quantity</th>
+						<th>Donated Date</th>
 					</tr>
 				</thead>
 				<tbody>
 					@foreach($res as $value)
 					<tr>
 						<td>{{$value->id}}</td>
-						<td>{{$value->fname}}</td>
-						<td>{{$value->lname}}</td>
-						<td>{{$value->gender}}</td>
-						<td>{{$value->address}}</td>
-						<td>{{$value->contact}}</td>
-						<td><a href="/delete_donor/{{$value->id}}">Delete</a></td>
+						<td>{{$value->donor_id}}</td>
+						<td>{{$value->b_group}}</td>
+						<td>{{$value->quantity}}ml</td>
+						<td>{{$value->d_date}}</td>
 					</tr>
 					@endforeach
 				</tbody>

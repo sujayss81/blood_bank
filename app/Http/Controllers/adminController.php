@@ -53,6 +53,7 @@ class adminController extends Controller
         $donation->donor_id = $d_id;
         $bloodtype = donor::where('id','=',$d_id)->value('bt_id');
         $bloodgroup = bloodtype::where('id','=',$bloodtype)->value('b_group');
+        $donation->b_group = $bloodgroup;
         $donation->bt_id = $bloodtype;
         $qty = $req->input('quantity');
         $donation->quantity = $qty;
@@ -74,5 +75,10 @@ class adminController extends Controller
             return redirect('/add_donation')->with('status','Something Went Wrong!! Please Try Again');
         }
 
+    }
+
+    public function view_donation(){
+        $res = donation::all();
+        return view('view_donation',compact('res'));
     }
 }

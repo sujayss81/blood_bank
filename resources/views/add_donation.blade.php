@@ -27,7 +27,7 @@
 					<a class ="nav-link" href="/manage_donor"><h5>Manage Donors</h5></a>
 				</li>
 				<li class="nav-item ">
-					<a class ="nav-link" href="#"><h5>Blood Quantity</h5></a>
+					<a class ="nav-link" href="/view_donation"><h5>View Donations</h5></a>
 				</li>
 				<li class="nav-item ">
 					<a class ="nav-link" href="#"><h5>View Donors</h5></a>

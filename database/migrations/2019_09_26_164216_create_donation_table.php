@@ -17,6 +17,7 @@ class CreateDonationTable extends Migration
             $table->integer('id')->autoIncrement()->nullable(false);
             $table->Integer('donor_id')->nullable(false);
             $table->Integer('bt_id')->nullable(false);
+            $table->string('b_group')->nullable(false);
             $table->integer('quantity')->nullable(false)->default(0);
             $table->date('d_date')->nullable(false);
             $table->foreign('donor_id')->references('id')->on('donor');
