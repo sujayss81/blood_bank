@@ -86,4 +86,9 @@ class adminController extends Controller
         $res = bloodtype::all();
         return view('view_blood',compact('res'));
     }
+
+    public function showDonor($id){
+        $res = donor::where('id','=',$id)->get();
+        return view('show_donor',compact('res'));
+    }
 }

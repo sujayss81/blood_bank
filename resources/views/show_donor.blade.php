@@ -16,7 +16,7 @@
 		<nav class="navbar navbar-expand navbar-light bg-light">
 			<h1 class="navbar-brand">Blood Bank</h1>
 			<ul class="navbar-nav mr-auto">
-				<li class="nav-item">
+				<li class="nav-item active">
 					<a class ="nav-link" href="/admin_home"><h5>Home</h5></a>
 				</li>
 				<li class="nav-item ">
@@ -25,11 +25,11 @@
 				<li class="nav-item ">
 					<a class ="nav-link" href="/manage_donor"><h5>Manage Donors</h5></a>
 				</li>
-				<li class="nav-item active">
+				<li class="nav-item ">
 					<a class ="nav-link" href="/view_donation"><h5>View Donations</h5></a>
 				</li>
 				<li class="nav-item ">
-					<a class ="nav-link" href="#"><h5>View Donors</h5></a>
+					<a class ="nav-link" href="/view_blood"><h5>View Blood Quantity</h5></a>
 				</li>
 				<li class="nav-item ">
 					<a class ="nav-link" href="#"><h5>View Donations</h5></a>
@@ -46,23 +46,23 @@
 			<table class="table table-striped table-hover text-center table-bordered">
 				<thead>
 					<tr>
-						<th>ID</th>
-						<th>Donor ID</th>
-						<th>Blood Group</th>
-						<th>Quantity</th>
-						<th>Donated Date</th>
-						<th>Donor Details</th>
+						<th>Donor id</th>
+						<th>First Name</th>
+						<th>Last Name</th>
+						<th>Gender</th>
+						<th>Address</th>
+						<th>Contact</th>
 					</tr>
 				</thead>
 				<tbody>
 					@foreach($res as $value)
 					<tr>
 						<td>{{$value->id}}</td>
-						<td>{{$value->donor_id}}</td>
-						<td>{{$value->b_group}}</td>
-						<td>{{$value->quantity}}ml</td>
-						<td>{{$value->d_date}}</td>
-						<td><a href="/show_donor/{{$value->donor_id}}">Click Here</a></td>
+						<td>{{$value->fname}}</td>
+						<td>{{$value->lname}}</td>
+						<td>{{$value->gender}}</td>
+						<td>{{$value->address}}</td>
+						<td>{{$value->contact}}</td>
 					</tr>
 					@endforeach
 				</tbody>
