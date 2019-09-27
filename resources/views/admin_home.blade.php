@@ -29,7 +29,7 @@
 					<a class ="nav-link" href="/view_donation"><h5>View Donations</h5></a>
 				</li>
 				<li class="nav-item ">
-					<a class ="nav-link" href="#"><h5>View Donors</h5></a>
+					<a class ="nav-link" href="/view_blood"><h5>View Blood Quantity</h5></a>
 				</li>
 				<li class="nav-item ">
 					<a class ="nav-link" href="#"><h5>View Donations</h5></a>
@@ -69,9 +69,9 @@
 				</div>
 				<div class="card col-4">
 				  <div class="card-body">
-				    <h5 class="card-title">View All Donors</h5>
+				    <h5 class="card-title">View Blood in Blood Bank</h5>
 				    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-				    <a href="#" class="btn btn-primary">View Donors</a>
+				    <a href="/view_blood" class="btn btn-primary">View Quantity</a>
 				  </div>
 				</div>
 			</div>

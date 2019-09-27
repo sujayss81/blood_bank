@@ -39,3 +39,4 @@ Route::get('/delete_donor/{id}','adminController@delete')->middleware('check_al_
 Route::view('/add_donation','add_donation')->middleware('check_al_status');
 Route::post('/addDonation','adminController@addDonation')->middleware('check_al_status');
 Route::get('/view_donation','adminController@view_donation')->middleware('check_al_status');
+Route::get('/view_blood','adminController@view_blood');

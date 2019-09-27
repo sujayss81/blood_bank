@@ -81,4 +81,9 @@ class adminController extends Controller
         $res = donation::all();
         return view('view_donation',compact('res'));
     }
+
+    public function view_blood(){
+        $res = bloodtype::all();
+        return view('view_blood',compact('res'));
+    }
 }
