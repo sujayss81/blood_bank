@@ -8,6 +8,7 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' href="{{asset('bootstrap/css/bootstrap.css')}}">
     <link rel='stylesheet' type='text/css' href="{{asset('bootstrap/css/admin_home_style.css')}}">
+    <link rel='stylesheet' type='text/css' href="{{asset('bootstrap/css/add_donation_style.css')}}">
     <script src="{{ asset('bootstrap/js/jquery.min.js' )}}"></script>
     <script src="{{ asset('bootstrap/js/bootstrap.js' )}}"></script>   
 </head>
@@ -16,14 +17,14 @@
 		<nav class="navbar navbar-expand navbar-light bg-light">
 			<h1 class="navbar-brand">Blood Bank</h1>
 			<ul class="navbar-nav mr-auto">
-				<li class="nav-item">
+				<li class="nav-item ">
 					<a class ="nav-link" href="/admin_home"><h5>Home</h5></a>
 				</li>
 				<li class="nav-item ">
-					<a class ="nav-link" href="#"><h5>ND</h5></a>
+					<a class ="nav-link active" href="/add_donation"><h5>Add Donation</h5></a>
 				</li>
-				<li class="nav-item active">
-					<a class ="nav-link" href="/manage_donors"><h5>Manage Donors</h5></a>
+				<li class="nav-item ">
+					<a class ="nav-link" href="/manage_donor"><h5>Manage Donors</h5></a>
 				</li>
 				<li class="nav-item ">
 					<a class ="nav-link" href="#"><h5>Blood Quantity</h5></a>
@@ -42,38 +43,26 @@
 		</nav>
 		<!-- ------------------------------------------------------------- -->
 		<span><h5>Admin Panel</h5></span>
-		<div class="container-fluid col-9">
+		<div class="container-fluid col-3 ">
 			@if(session('status'))
-				<div class="alert alert-danger text-center">
-					 {{session('status')}}
-				</div>
+			<div class="alert alert-danger">
+					{{session('status')}}
+			</div>
 			@endif
-			<table class="table table-striped table-hover text-center table-bordered">
-				<thead>
-					<tr>
-						<th>Donor id</th>
-						<th>First Name</th>
-						<th>Last Name</th>
-						<th>Gender</th>
-						<th>Address</th>
-						<th>Contact</th>
-						<th>Action</th>
-					</tr>
-				</thead>
-				<tbody>
-					@foreach($res as $value)
-					<tr>
-						<td>{{$value->id}}</td>
-						<td>{{$value->fname}}</td>
-						<td>{{$value->lname}}</td>
-						<td>{{$value->gender}}</td>
-						<td>{{$value->address}}</td>
-						<td>{{$value->contact}}</td>
-						<td><a href="/delete_donor/{{$value->id}}">Delete</a></td>
-					</tr>
-					@endforeach
-				</tbody>
-			</table>
+			<form method="POST" action="/addDonation">
+				@csrf
+				<div class="form-group">
+					<label for="donorid">Donor ID</label>
+					<input type="number" name="donorid" placeholder="Donor ID #" class="form-control">
+				</div>
+				<div class="form-group">
+					<label for="quantity">Quantity</label>
+					<input type="number" name="quantity" placeholder="Quantity Donated in ml" class="form-control">
+				</div>
+				<div class="text-center">
+						<input type="submit" name="Add Donation" value="Add Donation" class="btn btn-success">
+				</div>
+			</form>
 		</div>
 		<script type="text/javascript">
 			function confirmlogout(){

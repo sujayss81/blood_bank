@@ -14,7 +14,7 @@ class CreateHospitalTable extends Migration
     public function up()
     {
         Schema::create('hospital', function (Blueprint $table) {
-            $table->Integer('id')->autoincrement()->nullable(false);
+            $table->Integer('id')->autoIncrement()->nullable(false);
             $table->Integer('bt_id')->nullable(false);
             $table->biginteger('quantity')->nullable(false);
             $table->string('h_name')->nullable(false);

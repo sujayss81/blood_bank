@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Admin Home</title>
+	<title>Admin Panel</title>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Home</title>
@@ -20,7 +20,7 @@
 					<a class ="nav-link" href="#"><h5>Home</h5></a>
 				</li>
 				<li class="nav-item ">
-					<a class ="nav-link" href="#"><h5>ND</h5></a>
+					<a class ="nav-link" href="/add_donation"><h5>Add Donation</h5></a>
 				</li>
 				<li class="nav-item ">
 					<a class ="nav-link" href="/manage_donor"><h5>Manage Donors</h5></a>
@@ -46,9 +46,9 @@
 			<div class="row">
 				<div class="card col-4">
 				  <div class="card-body">
-				    <h5 class="card-title">ND</h5>
+				    <h5 class="card-title">Add donation</h5>
 				    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-				    <a href="#" class="btn btn-primary">ND</a>
+				    <a href="/add_donation" class="btn btn-primary">Add Donation</a>
 				  </div>
 				</div>
 				<div class="card col-4">

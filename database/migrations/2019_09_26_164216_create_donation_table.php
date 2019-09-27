@@ -14,10 +14,10 @@ class CreateDonationTable extends Migration
     public function up()
     {
         Schema::create('donation', function (Blueprint $table) {
-            $table->integer('id')->autoincrement()->nullable(false);
+            $table->integer('id')->autoIncrement()->nullable(false);
             $table->Integer('donor_id')->nullable(false);
             $table->Integer('bt_id')->nullable(false);
-            $table->integer('quantity')->nullable(false);
+            $table->integer('quantity')->nullable(false)->default(0);
             $table->date('d_date')->nullable(false);
             $table->foreign('donor_id')->references('id')->on('donor');
             $table->foreign('bt_id')->references('id')->on('bloodtype');

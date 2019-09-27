@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\donor;
+use App\donordonation;
 use Session;
 
 class donorController extends Controller
@@ -94,9 +95,37 @@ class donorController extends Controller
     	
     	$donor->timestamps = false;
     	$donor->dob = $date;
-
-
-    	if($donor->save())
+        $bloodtype = $req->input('bloodtype');
+        switch ($bloodtype) {
+            case 'A+':
+                $bloodtype = 1;
+                break;
+            case 'A-':
+                $bloodtype = 2;
+                break;
+            case 'B+':
+                $bloodtype = 3;
+                break;
+            case 'B-':
+                $bloodtype = 4;
+                break;
+            case 'AB+':
+                $bloodtype = 5;
+                break;
+            case 'AB-':
+                $bloodtype = 6;
+                break;
+            case 'O+':
+                $bloodtype = 7;
+                break;
+            case 'O-':
+                $bloodtype = 8;
+                break;
+        }
+        $donordonation = new donordonation;
+        $donordonation->bt_id = $bloodtype;
+        $donor->bt_id = $bloodtype;
+    	if($donor->save() && $donordonation->save())
     	{
     		return redirect('/suc_register');
     	}

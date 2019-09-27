@@ -48,6 +48,7 @@ form input{
 	padding-left: 10px;
 	padding-right: 10px;
 }
+
 /*div.container-fluid.col-6{
 	background-color: lightblue;
 }
@@ -98,7 +99,9 @@ body input.form-control{
 .navbar-nav > li{
 	padding-left: 20px;
 }
-
+select.bloodtype#margin_spacer{
+	max-width: 15%;
+}
 /*form + div.form-row{
 	max-width: 80%;
 }*/
