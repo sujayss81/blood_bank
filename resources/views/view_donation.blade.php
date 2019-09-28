@@ -16,7 +16,7 @@
 		<nav class="navbar navbar-expand navbar-light bg-light">
 			<h1 class="navbar-brand">Blood Bank</h1>
 			<ul class="navbar-nav mr-auto">
-				<li class="nav-item">
+				<li class="nav-item ">
 					<a class ="nav-link" href="/admin_home"><h5>Home</h5></a>
 				</li>
 				<li class="nav-item ">
@@ -25,17 +25,17 @@
 				<li class="nav-item ">
 					<a class ="nav-link" href="/manage_donor"><h5>Manage Donors</h5></a>
 				</li>
-				<li class="nav-item active">
-					<a class ="nav-link" href="/view_donation"><h5>View Donations</h5></a>
+				<li class="nav-item ">
+					<a class ="nav-link active" href="/view_donation"><h5>View Donations</h5></a>
 				</li>
 				<li class="nav-item ">
-					<a class ="nav-link" href="#"><h5>View Donors</h5></a>
+					<a class ="nav-link" href="/view_blood"><h5>View Blood</h5></a>
 				</li>
 				<li class="nav-item ">
-					<a class ="nav-link" href="#"><h5>View Donations</h5></a>
+					<a class ="nav-link" href="/add_transaction"><h5>Add H.Transaction</h5></a>
 				</li>
 				<li class="nav-item ">
-					<a class ="nav-link" href="#"><h5>Hospital Transactions</h5></a>
+					<a class ="nav-link" href="/view_transaction"><h5>View H.Transactions</h5></a>
 				</li>
 			</ul>
 			<a class="nav-link logout" onclick="confirmlogout()"><h5>Logout</h5></a>

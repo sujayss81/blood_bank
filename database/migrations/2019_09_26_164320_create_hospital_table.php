@@ -16,6 +16,7 @@ class CreateHospitalTable extends Migration
         Schema::create('hospital', function (Blueprint $table) {
             $table->Integer('id')->autoIncrement()->nullable(false);
             $table->Integer('bt_id')->nullable(false);
+            $table->string('b_group')->nullable(false);
             $table->biginteger('quantity')->nullable(false);
             $table->string('h_name')->nullable(false);
             $table->date('o_date')->nullable(false);

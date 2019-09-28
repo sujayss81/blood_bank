@@ -1,0 +1,12 @@
+select.form-control{
+	max-width: 25%;
+}
+form{
+	margin-top: 40%;
+}
+input.btn{
+	margin-top: 5%;
+}
+div.alert{
+	margin-top: 5%;
+}

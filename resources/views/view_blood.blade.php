@@ -28,14 +28,14 @@
 				<li class="nav-item ">
 					<a class ="nav-link" href="/view_donation"><h5>View Donations</h5></a>
 				</li>
-				<li class="nav-item active">
-					<a class ="nav-link" href="/view_blood"><h5>View Blood Quantity</h5></a>
+				<li class="nav-item ">
+					<a class ="nav-link active" href="/view_blood"><h5>View Blood</h5></a>
 				</li>
 				<li class="nav-item ">
-					<a class ="nav-link" href="#"><h5>View Donations</h5></a>
+					<a class ="nav-link" href="/add_transaction"><h5>Add H.Transaction</h5></a>
 				</li>
 				<li class="nav-item ">
-					<a class ="nav-link" href="#"><h5>Hospital Transactions</h5></a>
+					<a class ="nav-link" href="/view_transaction"><h5>View H.Transactions</h5></a>
 				</li>
 			</ul>
 			<a class="nav-link logout" onclick="confirmlogout()"><h5>Logout</h5></a>

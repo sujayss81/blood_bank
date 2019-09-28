@@ -8,6 +8,7 @@ use App\donor;
 use App\donation;
 use App\donordonation;
 use App\bloodtype;
+use App\hospital;
 use Session;
 use Carbon\Carbon;
 
@@ -91,4 +92,65 @@ class adminController extends Controller
         $res = donor::where('id','=',$id)->get();
         return view('show_donor',compact('res'));
     }
+
+    public function transaction(Request $req){
+        $hospital = new hospital;
+        $bloodgroup = $req->input('bloodgroup');
+        $quantity = $req->input('quantity');
+        $bloodtype;
+        switch ($bloodgroup) {
+            case 'A+':
+                $bloodtype = 1;
+                break;
+            case 'A-':
+                $bloodtype = 2;
+                break;
+            case 'B+':
+                $bloodtype = 3;
+                break;
+            case 'B-':
+                $bloodtype = 4;
+                break;
+            case 'AB+':
+                $bloodtype = 5;
+                break;
+            case 'AB-':
+                $bloodtype = 6;
+                break;
+            case 'O+':
+                $bloodtype = 7;
+                break;
+            case 'O-':
+                $bloodtype = 8;
+                break;
+        }
+        $hospital->bt_id = $bloodtype;
+        $hospital->b_group = $bloodgroup;
+        $hospital->quantity = $quantity;
+        $hospital->h_name = $req->input('hospitalname');
+        $hospital->o_date = $req->input('date');
+        $bt_quantity = bloodtype::where('id','=',$bloodtype)->value('quantity');
+        if ($bt_quantity == 0) {
+            return redirect('/add_transaction')->with('status','Blood Bank Empty');
+        }
+        else
+        {
+            $bt_quantity -= $quantity;
+            bloodtype::where('id','=',$bloodtype)->update(['quantity'=>$bt_quantity]);
+            if($hospital->save())
+            {
+                return redirect('/add_transaction')->with('status','Transaction Added');
+            }
+            else{
+                return redirect('/add_transaction')->with('status','Something Went Wrong!!');
+            }
+        }
+
+    }
+
+      public function view_transaction(){
+        $res = hospital::all();
+        return view('view_transaction',compact('res'));
+    }
+
 }

@@ -41,3 +41,6 @@ Route::post('/addDonation','adminController@addDonation')->middleware('check_al_
 Route::get('/view_donation','adminController@view_donation')->middleware('check_al_status');
 Route::get('/view_blood','adminController@view_blood')->middleware('check_al_status');
 Route::get('/show_donor/{id}','adminController@showDonor')->middleware('check_al_status');
+Route::view('/add_transaction','add_transaction')->middleware('check_al_status');
+Route::post('/transaction','adminController@transaction')->middleware('check_al_status');
+Route::get('/view_transaction','adminController@view_transaction')->middleware('check_al_status');

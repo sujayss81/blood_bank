@@ -29,13 +29,13 @@
 					<a class ="nav-link" href="/view_donation"><h5>View Donations</h5></a>
 				</li>
 				<li class="nav-item ">
-					<a class ="nav-link" href="/view_blood"><h5>View Blood Quantity</h5></a>
+					<a class ="nav-link" href="/view_blood"><h5>View Blood</h5></a>
 				</li>
 				<li class="nav-item ">
-					<a class ="nav-link" href="#"><h5>View Donations</h5></a>
+					<a class ="nav-link" href="/add_transaction"><h5>Add H.Transaction</h5></a>
 				</li>
 				<li class="nav-item ">
-					<a class ="nav-link" href="#"><h5>Hospital Transactions</h5></a>
+					<a class ="nav-link" href="/view_transaction"><h5>View H.Transactions</h5></a>
 				</li>
 			</ul>
 			<a class="nav-link logout" onclick="confirmlogout()"><h5>Logout</h5></a>
@@ -55,7 +55,7 @@
 				  <div class="card-body">
 				    <h5 class="card-title">Manage Donors</h5>
 				    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-				    <a href="/manage_donor" class="btn btn-primary">Update</a>
+				    <a href="/manage_donor" class="btn btn-primary">Manage</a>
 				  </div>
 				</div>
 			</div>
@@ -78,16 +78,16 @@
 			<div class="row">
 				<div class="card col-4">
 				  <div class="card-body">
-				    <h5 class="card-title">View All Donations</h5>
+				    <h5 class="card-title">Add Hospital Transactions</h5>
 				    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-				    <a href="#" class="btn btn-primary">View Donations</a>
+				    <a href="/add_transaction" class="btn btn-primary">Add Transaction</a>
 				  </div>
 				</div>
 				<div class="card col-4">
 				  <div class="card-body">
-				    <h5 class="card-title">Add Hospital Transactions</h5>
+				    <h5 class="card-title">View Hospital Transactions</h5>
 				    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-				    <a href="#" class="btn btn-primary">Add Transaction</a>
+				    <a href="/view_transaction" class="btn btn-primary">View Transaction</a>
 				  </div>
 				</div>
 			</div>
