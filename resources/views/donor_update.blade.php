@@ -11,6 +11,21 @@
     <script src="{{ asset('bootstrap/js/jquery.min.js' )}}"></script>
     <script src="{{ asset('bootstrap/js/bootstrap.js' )}}"></script>   
     <script src="{{ asset('bootstrap/js/admin_home.js' )}}"></script>   
+    <style type="text/css">
+    	div.container{
+    		max-width: 50%;
+    		margin-top: 5%;
+    	}
+    	input.btn{
+    		margin-top: 3%;
+    	}
+    	input{
+    		margin-bottom: 3%;
+    	}
+    	textarea{
+    		margin-bottom: 3%;
+    	}
+    </style>
 </head>
 <body>
 		<!-- NAVBAR -->
@@ -18,20 +33,20 @@
    			<nav class="navbar navbar-expand navbar-light bg-light">
    				<a class="navbar-brand" href="/donor_home">Blood Bank</a>
    				<ul class="navbar-nav mr-auto">
-   					<li class="nav-item ">
+   					<li class="nav-item active">
    						<a class="nav-link" href="/donor_home">Home</a>
    					</li>
    					<li class="nav-item">	
    						<a class="nav-link" href="#">Profile</a>
    					</li>	
    				</ul>
-   				<a onclick="confirmLogout()">LOGOUT</a>
+   				<a onclick="confirmLogout()" class="logout">LOGOUT</a>
    			</nav>
 		</div>
 		<!-- ----------------------------------------------------------------- -->
 		<!-- SideNav -->
 		<div class="container-flex col-2 float-left">
-			<img src="https://www.sgbt.lu/uploads/tx_bisgbio/default-profile_01.png">
+			<img src="{{asset('avatar.png')}}">
 			@foreach($res as $value)
 			<h5>Hello  {{$value->fname}}</h5>
 			@endforeach
@@ -41,7 +56,7 @@
 					<a class="nav-link active">Home</a>
 				</li> -->
 				<li class="nav-item">
-					<a class="nav-link" href="#">Rules</a>
+					<a class="nav-link" href="/rules">Rules</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="/donor_donation">View Donations</a>
@@ -52,25 +67,26 @@
 				<li class="nav-item">
 					<a class="nav-link" href="#">--</a>
 				</li>
-				<li class="nav-item ">
-					<a class="nav-link" href="/donor_update" style="color: black;">Update Profile</a>
+				<li class="nav-item">
+					<a class="nav-link" href="/donor_update">Update Profile</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">Change Password</a>
+					<a class="nav-link" href="/c_pass">Change Password</a>
 				</li>
 			</ul>
 			<button class="btn btn-danger" onclick="confirmLogout()">Logout</button>
 		</div>
 		<!-- ----------------------------------------------------------------- -->
 		<div class="container-flex col-10 float-right">
+			<div class="container">
 			@foreach($res as $item)
 			<form method="POST" action="/update_donor">
 				@csrf
-					<div class="row">
+					<!-- <div class="row"> -->
 						<label>Donor ID</label>
 						<input type="text" name="id" disabled="true" value="{{$item->id}}" class="form-control">
-					</div>
-					<div class="row">
+					<!-- </div> -->
+					<div class="form-row">
 						<div class="col">
 							<label>First Name</label>
 							<input type="text" name="fname" class="form-control" value="{{$item->fname}}">
@@ -80,25 +96,26 @@
 							<input type="text" name="lname" class="form-control" value="{{$item->lname}}">
 						</div>
 					</div>
-					<div class="row">
+					<!-- <div class="row"> -->
 						<label>Contact</label>
 						<input type="number" name="contact" class="form-control" value="{{$item->contact}}">
-					</div>
-					<div class="row">
+					<!-- </div> -->
+					<!-- <div class="row"> -->
 						<label>Address</label>
 						<textarea name="address" class="form-control" rows="5">
 							{{$item->address}}
 						</textarea>
-					</div>
-					<div class="row">
+					<!-- </div> -->
+					<!-- <div class="row"> -->
 						<label>Date of Birth</label>
 						<input type="date" name="dob" class="form-control" value="{{$item->dob}}">
-					</div>
+					<!-- </div> -->
 						<div class="text-center">
 						<input type="submit" name="update" value="Update" class="btn btn-success">
 						</div>
 			</form>
 			@endforeach
+			</div>
 		</div>
 		<script type="text/javascript">
 			function confirmLogout(){

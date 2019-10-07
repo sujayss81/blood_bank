@@ -18,6 +18,9 @@
     	input.btn{
     		margin-top: 4%;
     	}
+    	input{
+    		margin-bottom: 3%;
+    	}
     </style>
 </head>
 <body>
@@ -39,7 +42,7 @@
 		<!-- ----------------------------------------------------------------- -->
 		<!-- SideNav -->
 		<div class="container-flex col-2 float-left">
-			<img src="https://www.sgbt.lu/uploads/tx_bisgbio/default-profile_01.png">
+			<img src="{{asset('avatar.png')}}">
 			@foreach($res as $value)
 			<h5>Hello  {{$value->fname}}</h5>
 			@endforeach

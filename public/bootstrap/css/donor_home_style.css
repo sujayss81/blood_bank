@@ -46,3 +46,11 @@ div.row.top-row{
 .navbar-nav{
 	margin-left: 9%;
 }
+a.logout{
+	color: gray !important;
+	font-weight: 600;
+}
+a.logout:hover{
+	color: red !important;
+	cursor: pointer;
+}

@@ -10,7 +10,7 @@ use Session;
 
 class donorController extends Controller
 {
-    //
+
     public function auth(Request $req)
     {
     	$r_username = $req->input('username');
@@ -193,5 +193,11 @@ class donorController extends Controller
         {
             return redirect('/c_pass')->with('status','Incorrect Password');
         }
+    }
+
+    public function rules(){
+        $id = Session::get('id');
+        $res = donor::where('id','=',$id)->get();
+        return view('rules',compact('res'));
     }
 }

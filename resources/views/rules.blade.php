@@ -11,6 +11,21 @@
     <script src="{{ asset('bootstrap/js/jquery.min.js' )}}"></script>
     <script src="{{ asset('bootstrap/js/bootstrap.js' )}}"></script>   
     <script src="{{ asset('bootstrap/js/admin_home.js' )}}"></script>   
+    <style type="text/css">
+    	div.container{
+    		margin-top: 5%;
+    	}
+    	h3{
+    		margin-top: 3%;
+    		margin-bottom: 2%;
+    	}
+    	h3.sp{
+    		color: red;
+    	}
+    	h3.fp{
+    		color: blue;
+    	}
+    </style>
 </head>
 <body>
 		<!-- NAVBAR -->
@@ -63,68 +78,33 @@
 		</div>
 		<!-- ----------------------------------------------------------------- -->
 		<div class="container-flex col-10 float-right">
-			@if(session('updateStatus'))
-					<div class="alert alert-danger">
-						 {{session('updateStatus')}}
-					</div>
-			@endif
-			<div class="row top-row">
-				<div class="col-4">
-					<div class="card">
-						<div class="card-body">
-							<h5 class="card-title">Donation Rules</h5>
-							<p class="card-text">Lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor</p>
-							<a href="/rules" class="btn btn-primary">View Rules</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-4">
-					<div class="card">
-						<div class="card-body">
-							<h5 class="card-title">View All Donations</h5>
-							<p class="card-text">Lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor</p>
-							<a href="/donor_donation" class="btn btn-primary">View Donations</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-4">
-					<div class="card">
-						<div class="card-body">
-							<h5 class="card-title">--</h5>
-							<p class="card-text">Lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor</p>
-							<a href="#" class="btn btn-primary">--</a>
-						</div>
-					</div>
-				</div>
+			<div class="container">
+			<h3 class="fp">Parameters that determine the eligibility of an individual to donate blood</h3>
+			<ul>
+				<li>Overall health- The donor must be fit and healthy, and should not be suffering from transmittable diseases.</li>
+				<li>Age and weight- The donor must be 18–65 years old and should weigh a minimum of 50 kg.</li>
+				<li>Pulse rate- Between 50 and 100 without irregularities.</li>
+				<li>Hemoglobin level- A minimum of 12.5 g/dL.</li>
+				<li>Blood pressure- Diastolic: 50–100 mm Hg, Systolic: 100–180 mm Hg.</li>
+				<li>Body temperature- Should be normal, with an oral temperature not exceeding 37.5 °C.</li>
+				<li>The time period between successive blood donations should be more than 3 months.</li>
+			</ul>
+			<h3 class="sp">You will not be eligible to donate blood or platelets if you:</h3>
+			<ul>
+				<li>A person who has been tested HIV positive.</li>
+				<li>Individuals suffering from ailments like cardiac arrest, hypertension, blood pressure, cancer, epilepsy, kidney ailments and diabetes.</li>
+				<li>A person who has undergone ear/body piercing or tattoo in the past 6 months.</li>
+				<li>Individuals who have undergone immunization in the past 1 month.</li>
+				<li>Individuals treated for rabies or received Hepatitis B vaccine in the past 6 months.</li>
+				<li>A person who has consumed alcohol in the past 24 hours.</li>
+				<li>Women who are pregnant or breastfeeding.</li>
+				<li>Individuals who have undergone major dental procedures or general surgeries in the past 1 month.</li>
+				<li>Women who have had miscarriage in the past 6 months.</li>
+				<li>Individuals who have had fits, tuberculosis, asthma and allergic disorders in the past.</li>
+			</ul>
+			<div class="text-center">
+				<button class="btn btn-info" onclick="back()">Back</button>
 			</div>
-			<div class="row">
-				<div class="col-4">
-					<div class="card">
-						<div class="card-body">
-							<h5 class="card-title">--</h5>
-							<p class="card-text">Lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor</p>
-							<a href="#" class="btn btn-primary">--</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-4">
-					<div class="card">
-						<div class="card-body">
-							<h5 class="card-title">Update Profile</h5>
-							<p class="card-text">Lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor</p>
-							<a href="/donor_update" class="btn btn-primary">Update</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-4">
-					<div class="card">
-						<div class="card-body">
-							<h5 class="card-title">Change Password</h5>
-							<p class="card-text">Lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor</p>
-							<a href="/c_pass" class="btn btn-primary">Change Password</a>
-						</div>
-					</div>
-				</div>
 			</div>
 		</div>
 		<script type="text/javascript">
@@ -135,6 +115,9 @@
 					window.location = '/donor_logout';
 				}
 
+			}
+			function back(){
+				window.location.href = '/donor_home';
 			}
 		</script>
 </body>

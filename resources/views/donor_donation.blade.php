@@ -10,6 +10,11 @@
     <script src="{{ asset('bootstrap/js/jquery.min.js' )}}"></script>
     <script src="{{ asset('bootstrap/js/bootstrap.js' )}}"></script>   
     <script src="{{ asset('bootstrap/js/admin_home.js' )}}"></script>   
+    <style type="text/css">
+    	button.btn{
+    		margin-top: 2%;
+    	}
+    </style>
 </head>
 <body>
 		<!-- NAVBAR -->
@@ -17,20 +22,20 @@
    			<nav class="navbar navbar-expand navbar-light bg-light">
    				<a class="navbar-brand" href="/donor_home">Blood Bank</a>
    				<ul class="navbar-nav mr-auto">
-   					<li class="nav-item">
+   					<li class="nav-item active">
    						<a class="nav-link" href="/donor_home">Home</a>
    					</li>
    					<li class="nav-item">	
    						<a class="nav-link" href="#">Profile</a>
    					</li>	
    				</ul>
-   				<a onclick="confirmLogout()">LOGOUT</a>
+   				<a onclick="confirmLogout()" class="logout">LOGOUT</a>
    			</nav>
 		</div>
 		<!-- ----------------------------------------------------------------- -->
 		<!-- SideNav -->
 		<div class="container-flex col-2 float-left">
-			<img src="https://www.sgbt.lu/uploads/tx_bisgbio/default-profile_01.png">
+			<img src="{{asset('avatar.png')}}">
 			@foreach($res as $value)
 			<h5>Hello  {{$value->fname}}</h5>
 			@endforeach
@@ -40,10 +45,10 @@
 					<a class="nav-link active">Home</a>
 				</li> -->
 				<li class="nav-item">
-					<a class="nav-link" href="#">Rules</a>
+					<a class="nav-link" href="/rules">Rules</a>
 				</li>
-				<li class="nav-item active">
-					<a class="nav-link " href="/donor_donation" style="color: black;">View Donations</a>
+				<li class="nav-item">
+					<a class="nav-link" href="/donor_donation">View Donations</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="#">--</a>
@@ -52,10 +57,10 @@
 					<a class="nav-link" href="#">--</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">Update Profile</a>
+					<a class="nav-link" href="/donor_update">Update Profile</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">Change Password</a>
+					<a class="nav-link" href="/c_pass">Change Password</a>
 				</li>
 			</ul>
 			<button class="btn btn-danger" onclick="confirmLogout()">Logout</button>
@@ -78,6 +83,9 @@
 				</tbody>
 				@endforeach
 			</table>
+			<div class="text-center">
+				<button onclick="back()" class="btn btn-info">Back</button>
+			</div>
 		</div>
 		<script type="text/javascript">
 			function confirmLogout(){
@@ -87,6 +95,9 @@
 					window.location = '/donor_logout';
 				}
 
+			}
+			function back(){
+				window.location.href="/donor_home";
 			}
 		</script>
 </body>
