@@ -52,7 +52,7 @@
 					<a class="nav-link active">Home</a>
 				</li> -->
 				<li class="nav-item">
-					<a class="nav-link" href="#">Rules</a>
+					<a class="nav-link" href="/rules">Rules</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="/donor_donation">View Donations</a>

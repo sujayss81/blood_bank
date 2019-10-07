@@ -33,7 +33,7 @@
    			<nav class="navbar navbar-expand navbar-light bg-light">
    				<a class="navbar-brand" href="/donor_home">Blood Bank</a>
    				<ul class="navbar-nav mr-auto">
-   					<li class="nav-item active">
+   					<li class="nav-item ">
    						<a class="nav-link" href="/donor_home">Home</a>
    					</li>
    					<li class="nav-item">	
@@ -56,7 +56,7 @@
 					<a class="nav-link active">Home</a>
 				</li> -->
 				<li class="nav-item">
-					<a class="nav-link" href="/rules">Rules</a>
+					<a class="nav-link" href="/rules" style="color: black">Rules</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="/donor_donation">View Donations</a>
