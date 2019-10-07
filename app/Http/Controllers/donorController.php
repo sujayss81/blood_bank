@@ -157,4 +157,41 @@ class donorController extends Controller
             return redirect('/donor_home')->with('updateStatus','Update Sucessfull');
         }
     }
+
+    public function cPass(){
+        $id = Session::get('id');
+        $res = donor::where('id','=',$id)->get();
+        return view('c_pass',compact('res'));
+    }
+
+    public function changePassword(Request $req){
+        $id = Session::get('id');
+        $cpass = $req->input('cpass');
+        $npass = $req->input('npass');
+        $conpass = $req->input('conpass');
+        $opass = donor::where('id','=',$id)->value('password');
+        if($cpass == $opass){
+            if($npass == $conpass){
+                if($opass != $npass){
+                    $update = donor::where('id','=',$id)->update(['password'=>$npass]);
+                    if($update){
+                        return redirect('/donor_home')->with('updateStatus','Password Changed');
+                    }
+                }
+                else if($npass == $conpass){
+                    return redirect('c_pass')->with('status','That was Your Current Password!!');
+                }
+                else{
+                    return redirect('c_pass')->with('status','Something Went Wrong!!Try Again');
+                }
+            }
+            else{
+                return redirect('/c_pass')->with('status','Passwords Dont Match');
+            }
+        }
+        else
+        {
+            return redirect('/c_pass')->with('status','Incorrect Password');
+        }
+    }
 }

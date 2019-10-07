@@ -11,6 +11,14 @@
     <script src="{{ asset('bootstrap/js/jquery.min.js' )}}"></script>
     <script src="{{ asset('bootstrap/js/bootstrap.js' )}}"></script>   
     <script src="{{ asset('bootstrap/js/admin_home.js' )}}"></script>   
+    <style type="text/css">
+    	div.container-flex.col-4{
+    		margin: 10% 0 0 30%;
+    	}
+    	input.btn{
+    		margin-top: 4%;
+    	}
+    </style>
 </head>
 <body>
 		<!-- NAVBAR -->
@@ -18,7 +26,7 @@
    			<nav class="navbar navbar-expand navbar-light bg-light">
    				<a class="navbar-brand" href="/donor_home">Blood Bank</a>
    				<ul class="navbar-nav mr-auto">
-   					<li class="nav-item active">
+   					<li class="nav-item">
    						<a class="nav-link" href="/donor_home">Home</a>
    					</li>
    					<li class="nav-item">	
@@ -56,76 +64,33 @@
 					<a class="nav-link" href="/donor_update">Update Profile</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="/c_pass">Change Password</a>
+					<a class="nav-link" href="/c_pass" style="color: black;">Change Password</a>
 				</li>
 			</ul>
 			<button class="btn btn-danger" onclick="confirmLogout()">Logout</button>
 		</div>
 		<!-- ----------------------------------------------------------------- -->
 		<div class="container-flex col-10 float-right">
-			@if(session('updateStatus'))
-					<div class="alert alert-danger">
-						 {{session('updateStatus')}}
-					</div>
+		<div class="container-flex col-4">
+			@if( session('status'))
+				<div class="alert alert-danger">
+					{{session('status')}}
+				</div>
 			@endif
-			<div class="row top-row">
-				<div class="col-4">
-					<div class="card">
-						<div class="card-body">
-							<h5 class="card-title">Donation Rules</h5>
-							<p class="card-text">Lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor</p>
-							<a href="#" class="btn btn-primary">View Rules</a>
-						</div>
-					</div>
+			<form method="post" action="/changePassword">
+				@csrf
+				<label>Current Password</label>
+				<input type="password" name="cpass" class="form-control" placeholder="Enter Current Password">
+				<hr>
+				<label>New Password</label>
+				<input type="password" name="npass" class="form-control" placeholder="Enter New Password">
+				<label>Confirm Password</label>
+				<input type="password" name="conpass" class="form-control" placeholder="Enter Password again">
+				<div class="text-center">
+				<input type="submit" name="change" value="Change Password" class="btn btn-warning">
 				</div>
-				<div class="col-4">
-					<div class="card">
-						<div class="card-body">
-							<h5 class="card-title">View All Donations</h5>
-							<p class="card-text">Lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor</p>
-							<a href="/donor_donation" class="btn btn-primary">View Donations</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-4">
-					<div class="card">
-						<div class="card-body">
-							<h5 class="card-title">--</h5>
-							<p class="card-text">Lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor</p>
-							<a href="#" class="btn btn-primary">--</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-4">
-					<div class="card">
-						<div class="card-body">
-							<h5 class="card-title">--</h5>
-							<p class="card-text">Lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor</p>
-							<a href="#" class="btn btn-primary">--</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-4">
-					<div class="card">
-						<div class="card-body">
-							<h5 class="card-title">Update Profile</h5>
-							<p class="card-text">Lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor</p>
-							<a href="/donor_update" class="btn btn-primary">Update</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-4">
-					<div class="card">
-						<div class="card-body">
-							<h5 class="card-title">Change Password</h5>
-							<p class="card-text">Lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor</p>
-							<a href="/c_pass" class="btn btn-primary">Change Password</a>
-						</div>
-					</div>
-				</div>
-			</div>
+			</form>
+		</div>
 		</div>
 		<script type="text/javascript">
 			function confirmLogout(){

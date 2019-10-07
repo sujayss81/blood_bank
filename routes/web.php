@@ -1,5 +1,4 @@
 <?php
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -50,3 +49,5 @@ Route::view('/suc_register','suc_register');
 Route::get('/donor_donation','donorController@donorDonation')->middleware('check_dl_status');
 Route::get('/donor_update','donorController@donorUpdate')->middleware('check_dl_status');
 Route::post('/update_donor','donorController@updateDonor')->middleware('check_dl_status');
+Route::get('/c_pass','donorController@cPass')->middleware('check_dl_status');
+Route::post('/changePassword','donorController@changePassword')->middleware('check_dl_status');
