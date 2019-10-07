@@ -9,4 +9,5 @@ class donor extends Model
     protected $table = 'donor';
     protected $primarykey = 'id';
     protected $fillable = ['fname','lname','dob','gender','address','contact','password'];
+    public $timestamps = false;
 }

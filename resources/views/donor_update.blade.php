@@ -18,7 +18,7 @@
    			<nav class="navbar navbar-expand navbar-light bg-light">
    				<a class="navbar-brand" href="/donor_home">Blood Bank</a>
    				<ul class="navbar-nav mr-auto">
-   					<li class="nav-item active">
+   					<li class="nav-item ">
    						<a class="nav-link" href="/donor_home">Home</a>
    					</li>
    					<li class="nav-item">	
@@ -52,8 +52,8 @@
 				<li class="nav-item">
 					<a class="nav-link" href="#">--</a>
 				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="/donor_update">Update Profile</a>
+				<li class="nav-item ">
+					<a class="nav-link" href="/donor_update" style="color: black;">Update Profile</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="#">Change Password</a>
@@ -63,69 +63,42 @@
 		</div>
 		<!-- ----------------------------------------------------------------- -->
 		<div class="container-flex col-10 float-right">
-			@if(session('updateStatus'))
-					<div class="alert alert-danger">
-						 {{session('updateStatus')}}
+			@foreach($res as $item)
+			<form method="POST" action="/update_donor">
+				@csrf
+					<div class="row">
+						<label>Donor ID</label>
+						<input type="text" name="id" disabled="true" value="{{$item->id}}" class="form-control">
 					</div>
-			@endif
-			<div class="row top-row">
-				<div class="col-4">
-					<div class="card">
-						<div class="card-body">
-							<h5 class="card-title">Donation Rules</h5>
-							<p class="card-text">Lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor</p>
-							<a href="#" class="btn btn-primary">View Rules</a>
+					<div class="row">
+						<div class="col">
+							<label>First Name</label>
+							<input type="text" name="fname" class="form-control" value="{{$item->fname}}">
+						</div>
+						<div class="col">
+							<label>Last Name</label>
+							<input type="text" name="lname" class="form-control" value="{{$item->lname}}">
 						</div>
 					</div>
-				</div>
-				<div class="col-4">
-					<div class="card">
-						<div class="card-body">
-							<h5 class="card-title">View All Donations</h5>
-							<p class="card-text">Lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor</p>
-							<a href="/donor_donation" class="btn btn-primary">View Donations</a>
-						</div>
+					<div class="row">
+						<label>Contact</label>
+						<input type="number" name="contact" class="form-control" value="{{$item->contact}}">
 					</div>
-				</div>
-				<div class="col-4">
-					<div class="card">
-						<div class="card-body">
-							<h5 class="card-title">--</h5>
-							<p class="card-text">Lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor</p>
-							<a href="#" class="btn btn-primary">--</a>
-						</div>
+					<div class="row">
+						<label>Address</label>
+						<textarea name="address" class="form-control" rows="5">
+							{{$item->address}}
+						</textarea>
 					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-4">
-					<div class="card">
-						<div class="card-body">
-							<h5 class="card-title">--</h5>
-							<p class="card-text">Lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor</p>
-							<a href="#" class="btn btn-primary">--</a>
-						</div>
+					<div class="row">
+						<label>Date of Birth</label>
+						<input type="date" name="dob" class="form-control" value="{{$item->dob}}">
 					</div>
-				</div>
-				<div class="col-4">
-					<div class="card">
-						<div class="card-body">
-							<h5 class="card-title">Update Profile</h5>
-							<p class="card-text">Lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor</p>
-							<a href="/donor_update" class="btn btn-primary">Update</a>
+						<div class="text-center">
+						<input type="submit" name="update" value="Update" class="btn btn-success">
 						</div>
-					</div>
-				</div>
-				<div class="col-4">
-					<div class="card">
-						<div class="card-body">
-							<h5 class="card-title">Change Password</h5>
-							<p class="card-text">Lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor</p>
-							<a href="#" class="btn btn-primary">Change Password</a>
-						</div>
-					</div>
-				</div>
-			</div>
+			</form>
+			@endforeach
 		</div>
 		<script type="text/javascript">
 			function confirmLogout(){

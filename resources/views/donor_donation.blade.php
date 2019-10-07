@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Donor Home</title>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Home</title>
+    <title>Donations</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' href="{{asset('bootstrap/css/bootstrap.css')}}">
     <link rel='stylesheet' type='text/css' href="{{asset('bootstrap/css/donor_home_style.css')}}">
@@ -18,7 +17,7 @@
    			<nav class="navbar navbar-expand navbar-light bg-light">
    				<a class="navbar-brand" href="/donor_home">Blood Bank</a>
    				<ul class="navbar-nav mr-auto">
-   					<li class="nav-item active">
+   					<li class="nav-item">
    						<a class="nav-link" href="/donor_home">Home</a>
    					</li>
    					<li class="nav-item">	
@@ -43,8 +42,8 @@
 				<li class="nav-item">
 					<a class="nav-link" href="#">Rules</a>
 				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="/donor_donation">View Donations</a>
+				<li class="nav-item active">
+					<a class="nav-link " href="/donor_donation" style="color: black;">View Donations</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="#">--</a>
@@ -53,7 +52,7 @@
 					<a class="nav-link" href="#">--</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="/donor_update">Update Profile</a>
+					<a class="nav-link" href="#">Update Profile</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="#">Change Password</a>
@@ -63,69 +62,22 @@
 		</div>
 		<!-- ----------------------------------------------------------------- -->
 		<div class="container-flex col-10 float-right">
-			@if(session('updateStatus'))
-					<div class="alert alert-danger">
-						 {{session('updateStatus')}}
-					</div>
-			@endif
-			<div class="row top-row">
-				<div class="col-4">
-					<div class="card">
-						<div class="card-body">
-							<h5 class="card-title">Donation Rules</h5>
-							<p class="card-text">Lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor</p>
-							<a href="#" class="btn btn-primary">View Rules</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-4">
-					<div class="card">
-						<div class="card-body">
-							<h5 class="card-title">View All Donations</h5>
-							<p class="card-text">Lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor</p>
-							<a href="/donor_donation" class="btn btn-primary">View Donations</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-4">
-					<div class="card">
-						<div class="card-body">
-							<h5 class="card-title">--</h5>
-							<p class="card-text">Lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor</p>
-							<a href="#" class="btn btn-primary">--</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-4">
-					<div class="card">
-						<div class="card-body">
-							<h5 class="card-title">--</h5>
-							<p class="card-text">Lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor</p>
-							<a href="#" class="btn btn-primary">--</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-4">
-					<div class="card">
-						<div class="card-body">
-							<h5 class="card-title">Update Profile</h5>
-							<p class="card-text">Lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor</p>
-							<a href="/donor_update" class="btn btn-primary">Update</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-4">
-					<div class="card">
-						<div class="card-body">
-							<h5 class="card-title">Change Password</h5>
-							<p class="card-text">Lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor</p>
-							<a href="#" class="btn btn-primary">Change Password</a>
-						</div>
-					</div>
-				</div>
-			</div>
+			<table class="table table-hover table-bordered table-striped text-center" style=" margin: 5% 0 0 5%;max-width: 90%;">		
+				<thead>
+					<th>ID</th>
+					<th>Blood Group</th>
+					<th>Quantity</th>
+					<th>Date</th>
+				</thead>
+				@foreach($val as $item)
+				<tbody>				
+					<td>{{$item->id}}</td>
+					<td>{{$item->b_group}}</td>
+					<td>{{$item->quantity}}</td>
+					<td>{{$item->d_date}}</td>			
+				</tbody>
+				@endforeach
+			</table>
 		</div>
 		<script type="text/javascript">
 			function confirmLogout(){

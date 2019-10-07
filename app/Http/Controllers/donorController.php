@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\donor;
 use App\donordonation;
+use App\donation;
 use Session;
 
 class donorController extends Controller
@@ -129,5 +130,31 @@ class donorController extends Controller
     	{
     		return redirect('/suc_register');
     	}
+    }
+
+    public function donordonation(){
+        $id = Session::get('id');
+        $res = donor::where('id','=',$id)->get();
+        $val = donation::where('donor_id','=',$id)->get();
+            return view('donor_donation',compact('val','res'));
+    }
+
+    public function donorUpdate(){
+        $id = Session::get('id');
+        $res = donor::where('id','=',$id)->get();
+        return view('donor_update',compact('res'));
+    }
+
+    public function updateDonor(Request $req){
+        $fname = $req->input('fname');
+        $lname = $req->input('lname');
+        $contact = $req->input('contact');
+        $address = $req->input('address');
+        $dob = $req->input('dob');
+        $id = Session::get('id');
+        $update = donor::where('id','=',$id)->update(["fname"=>$fname,"lname"=>$lname,"contact"=>$contact,"address"=>$address,"dob"=>$dob]);
+        if($update){
+            return redirect('/donor_home')->with('updateStatus','Update Sucessfull');
+        }
     }
 }
