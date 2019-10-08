@@ -52,3 +52,4 @@ Route::post('/update_donor','donorController@updateDonor')->middleware('check_dl
 Route::get('/c_pass','donorController@cPass')->middleware('check_dl_status');
 Route::post('/changePassword','donorController@changePassword')->middleware('check_dl_status');
 Route::get('/rules','donorController@rules')->middleware('check_dl_status');
+Route::get('/profile','donorController@profile')->middleware('check_dl_status');

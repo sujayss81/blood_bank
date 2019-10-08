@@ -23,6 +23,7 @@ class DonorTableMigration extends Migration
             $table->biginteger('contact')->nullable(false);
             $table->string('password')->nullable(false);
             $table->integer('bt_id');
+            $table->string('bgroup')->nullable(false);
         });
     }
 

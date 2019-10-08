@@ -151,8 +151,9 @@ class donorController extends Controller
         $contact = $req->input('contact');
         $address = $req->input('address');
         $dob = $req->input('dob');
+        $bgroup = $req->input('bgroup');
         $id = Session::get('id');
-        $update = donor::where('id','=',$id)->update(["fname"=>$fname,"lname"=>$lname,"contact"=>$contact,"address"=>$address,"dob"=>$dob]);
+        $update = donor::where('id','=',$id)->update(["fname"=>$fname,"lname"=>$lname,"contact"=>$contact,"address"=>$address,"dob"=>$dob,"bgroup"=>$bgroup]);
         if($update){
             return redirect('/donor_home')->with('updateStatus','Update Sucessfull');
         }
@@ -199,5 +200,11 @@ class donorController extends Controller
         $id = Session::get('id');
         $res = donor::where('id','=',$id)->get();
         return view('rules',compact('res'));
+    }
+
+    public function profile(){
+        $id = Session::get('id');
+        $res = donor::where('id','=',$id)->get();
+        return view('profile',compact('res'));
     }
 }

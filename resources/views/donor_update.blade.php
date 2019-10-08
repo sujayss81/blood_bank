@@ -37,7 +37,7 @@
    						<a class="nav-link" href="/donor_home">Home</a>
    					</li>
    					<li class="nav-item">	
-   						<a class="nav-link" href="#">Profile</a>
+   						<a class="nav-link" href="/profile">Profile</a>
    					</li>	
    				</ul>
    				<a onclick="confirmLogout()" class="logout">LOGOUT</a>
@@ -56,7 +56,7 @@
 					<a class="nav-link active">Home</a>
 				</li> -->
 				<li class="nav-item">
-					<a class="nav-link" href="/rules">Rules</a>
+					<a class="nav-link" href="/rules">Donation Rules</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="/donor_donation">View Donations</a>
@@ -101,6 +101,20 @@
 						<input type="number" name="contact" class="form-control" value="{{$item->contact}}">
 					<!-- </div> -->
 					<!-- <div class="row"> -->
+						<label>Blood Group</label>
+						<div class="col-2">
+						<select class="form-control" name="bgroup"> 
+							<option>{{$item->bgroup}}</option>
+							    <option>A+</option>
+			                    <option>A-</option>
+			                    <option>B+</option>
+			                    <option>B-</option>
+			                    <option>AB+</option>
+			                    <option>AB-</option>
+			                    <option>O+</option>
+			                    <option>O-</option>
+						</select>
+						</div>
 						<label>Address</label>
 						<textarea name="address" class="form-control" rows="5">
 							{{$item->address}}

@@ -22,7 +22,7 @@
    						<a class="nav-link" href="/donor_home">Home</a>
    					</li>
    					<li class="nav-item">	
-   						<a class="nav-link" href="#">Profile</a>
+   						<a class="nav-link" href="/profile">Profile</a>
    					</li>	
    				</ul>
    				<a onclick="confirmLogout()" class="logout">LOGOUT</a>
@@ -41,7 +41,7 @@
 					<a class="nav-link active">Home</a>
 				</li> -->
 				<li class="nav-item">
-					<a class="nav-link" href="/rules">Rules</a>
+					<a class="nav-link" href="/rules">Donation Rules</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="/donor_donation">View Donations</a>

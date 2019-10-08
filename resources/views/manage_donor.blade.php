@@ -10,6 +10,14 @@
     <link rel='stylesheet' type='text/css' href="{{asset('bootstrap/css/admin_home_style.css')}}">
     <script src="{{ asset('bootstrap/js/jquery.min.js' )}}"></script>
     <script src="{{ asset('bootstrap/js/bootstrap.js' )}}"></script>   
+    <style type="text/css">
+    	td a{
+    		color: blue !important;
+    	}
+    	td a:hover{
+    		cursor: pointer;
+    	}
+    </style>
 </head>
 <body>
 		<!-- NavBar -->
@@ -70,7 +78,7 @@
 						<td>{{$value->gender}}</td>
 						<td>{{$value->address}}</td>
 						<td>{{$value->contact}}</td>
-						<td><a href="/delete_donor/{{$value->id}}">Delete</a></td>
+						<td><a onclick="confirmDelete();">Delete</a></td>
 					</tr>
 					@endforeach
 				</tbody>
@@ -84,6 +92,13 @@
 					window.location = '/admin_logout';
 				}
 
+			}
+			function confirmDelete(){
+				var res = confirm("Are you Sure!!");
+				if(res)
+				{
+					window.location = '/delete_donor/{{$value->id}}';
+				}
 			}
 		</script>
 </body>

@@ -1,0 +1,32 @@
+table{
+	margin-top: 3%;
+	border: none;
+	margin-left: 20%;
+	margin-bottom: 5%;
+	/*color: white;*/
+}
+table td{
+	padding-left: 0%;
+	padding-top: 3%;
+	font-weight: 500;
+	color: white;
+}
+table th{
+	width: 17%;
+	padding-top: 3%;
+}
+div.container.pcard{
+	margin-top: 3%;
+	background-color: #f85262;
+	box-sizing: border-box;
+	border-style: solid;
+	box-shadow: 2px 2px 5px 5px grey;
+}
+.btn{
+	margin-top: 3%;
+	margin-left: 2%;
+	margin-bottom: 10%;
+}
+div.bgroup{
+	margin-left: 35%;
+}
