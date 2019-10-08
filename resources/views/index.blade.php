@@ -88,30 +88,30 @@
             <h1>Register with us</h1>
             <h5>Happy donating</h5>
             <div class="form-row">
-                <div class="form-col">
-                    <input type="text" name="fname" class="form-control" id="margin_spacer" placeholder="First Name">
-                </div>
-                <div class="form-col">
-                    <input type="text" name="lname" class="form-control" placeholder="Last Name" id="margin_spacer">
-                </div>
+                <!-- <div class="col"> -->
+                    <input type="text" name="fname" class="form-control " id="margin_spacer" placeholder="First Name">
+                <!-- </div> -->
+                <!-- <div class="col"> -->
+                    <input type="text" name="lname" class="form-control " placeholder="Last Name" id="margin_spacer">
+                <!-- </div> -->
             </div>
-            <div class="form-row">
+            <!-- <div class="form-row"> -->
                 <!-- <div class="form-col"> -->
                 <textarea  rows="4" cols="30" placeholder="Address" name="address" id="margin_spacer" class="form-control"></textarea>
                 <!-- </div> -->
-            </div>
-            <div class="form-row">
+            <!-- </div> -->
+            <!-- <div class="form-row"> -->
                 <!-- <div class="form-col"> -->
                 <input type="number" name="contact" placeholder="Mobile Number" id="margin_spacer" class="form-control">
                 <!-- </div> -->
-            </div>
-            <div class="form-row">
+            <!-- </div> -->
+            <!-- <div class="form-row"> -->
                 <!-- <div class="form-col"> -->
                 <input type="password" name="password" placeholder="New Password" id="margin_spacer" class="form-control">
                 <!-- </div> -->
-            </div>
+            <!-- </div> -->
             <h6>Blood Group</h6>
-            <div class="form-row">
+            <!-- <div class="form-row"> -->
                 <select class="form-control bloodtype" id="margin_spacer" name='bloodtype'>
                     <option>A+</option>
                     <option>A-</option>
@@ -122,11 +122,13 @@
                     <option>O+</option>
                     <option>O-</option>
                 </select>
-            </div>
+            <!-- </div> -->
             <h6>Date of Birth</h6>
-            <div class="form-row">
-            <div class="form-col">
-            <select class="form-control" id="margin_spacer" name="day">
+            <div class="container-flex col-7 dob">
+            <div class="form-row" id="margin_spacer">
+            <!-- <div id="margin_spacer"> -->
+                <div class="col dob">
+            <select class="form-control dob" name="day">
                 <option>Day</option>
                 <option>1</option>
                 <option>2</option>
@@ -160,9 +162,10 @@
                 <option>30</option>
                 <option>31</option>
             </select>
-            </div>
-            <div class="form-col">
-                <select class="form-control" id="margin_spacer" name="month">
+        </div>
+            <!-- </div> -->
+            <div class="col dob">
+                <select class="form-control dob"  name="month">
                     <option>Month</option>
                     <option>Janaury</option>
                     <option>Febraury</option>
@@ -178,8 +181,8 @@
                     <option>December</option>
                 </select>
             </div>
-            <div class="form-col">
-                <select class="form-control" id="margin_spacer" name="year">
+            <div class="col dob">
+                <select class="form-control dob"  name="year">
                     <option>Year</option>
                     <option>2019</option>
                     <option>2018</option>
@@ -264,22 +267,25 @@
                 </select>
             </div>
         </div>
+    </div>
         <h6>Gender</h6>
-        <div class="form-row">
-            <div class="form-col" id="margin_spacer">
-                <input type="radio" name="gender" value="Male">
+        <div id="margin_spacer">
+            <!-- <div class="form-col" id="margin_spacer"> -->
+                <input type="radio" name="gender" id="margin_spacer" value="Male">
                 <label for="male">Male</label>
-            </div>
-            <div class="form-col" id="margin_spacer">
-                <input type="radio" name="gender" value="Female">
+            <!-- </div> -->
+            <!-- <div class="form-col" id="margin_spacer"> -->
+                <input type="radio" name="gender" id="margin_spacer" value="Female">
                 <label for="female">Female</label>
-            </div>
-            <div class="form-col" id="margin_spacer">
-                <input type="radio" name="gender" value="Other">
+            <!-- </div> -->
+            <!-- <div class="form-col" id="margin_spacer"> -->
+                <input type="radio" name="gender" id="margin_spacer" value="Other">
                 <label for="other">Other</label>
-            </div>
+            <!-- </div> -->
         </div>
-        <hr>
+        <div class="hr">
+            <hr>
+        </div>
         <input type="submit" name="Register" value="Register" class="btn btn-primary">
         </form>
     </div>

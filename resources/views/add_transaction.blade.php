@@ -15,7 +15,8 @@
 <body>
 		<!-- NavBar -->
 		<nav class="navbar navbar-expand navbar-light bg-light">
-			<h1 class="navbar-brand">Blood Bank</h1>
+			<!-- <h1 class="navbar-brand">Blood Bank</h1> -->
+			<a class="navbar-brand" href="/admin_home">Blood Bank</a>
 			<ul class="navbar-nav mr-auto">
 				<li class="nav-item ">
 					<a class ="nav-link" href="/admin_home"><h5>Home</h5></a>

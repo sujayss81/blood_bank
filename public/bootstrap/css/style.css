@@ -68,11 +68,17 @@ div.col-4.container-fluid{
 
 #margin_spacer{
 	margin-left: 5px;
-	/*margin-right: 5px;*/
+	margin-right: 5px;
 	margin-top: 10px;
 	margin-bottom: 5px;
 }
-
+div.form-row{
+	margin-left: 1px;
+	max-width: 100%;
+}
+div.hr{
+	max-width: 81%;
+}
 input.btn{
 	margin-top: 3px;
 }
@@ -81,6 +87,7 @@ select#margin_spacer{
 	margin-left: 25px;
 	margin-right: 0px;
 	margin-bottom: 8px;
+	max-width: 100px;
 }
 div div#margin_spacer{
 	margin-top: 2px;
@@ -104,4 +111,13 @@ select.bloodtype#margin_spacer{
 }
 /*form + div.form-row{
 	max-width: 80%;
+}*/
+select.dob{
+	padding: 0 0 0 0 !important;
+}
+div.dob{
+	padding: 0 0 0 1px !important;
+}
+/*div.container-flex.dob{
+	padding: 0 0 0 0 !important;
 }*/

@@ -21,7 +21,7 @@
 	  				<input type="password" name="password" class="form-control">
 	  			</div>
 	  			<div class="text-center">
-	  				<input type="submit" name="login" value="Login" class="btn btn-primary">
+	  				<input type="submit" name="login" value="Login" class="btn btn-warning">
 	  			</div>
 	  		   @if (session('status'))
    			   <div class="alert alert-danger">

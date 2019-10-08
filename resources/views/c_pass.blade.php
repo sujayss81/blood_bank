@@ -25,7 +25,7 @@
 </head>
 <body>
 		<!-- NAVBAR -->
-		<div class="container-flex col-12 float-right">
+		<div class="container-fluid col-12 float-right">
    			<nav class="navbar navbar-expand navbar-light bg-light">
    				<a class="navbar-brand" href="/donor_home">Blood Bank</a>
    				<ul class="navbar-nav mr-auto">
@@ -36,12 +36,12 @@
    						<a class="nav-link" href="#">Profile</a>
    					</li>	
    				</ul>
-   				<a onclick="confirmLogout()">LOGOUT</a>
+   				<a onclick="confirmLogout()" class="logout">LOGOUT</a>
    			</nav>
 		</div>
 		<!-- ----------------------------------------------------------------- -->
 		<!-- SideNav -->
-		<div class="container-flex col-2 float-left">
+		<div class="container-fluid col-2 float-left">
 			<img src="{{asset('avatar.png')}}">
 			@foreach($res as $value)
 			<h5>Hello  {{$value->fname}}</h5>

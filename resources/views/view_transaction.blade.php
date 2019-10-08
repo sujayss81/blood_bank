@@ -14,9 +14,10 @@
 <body>
 		<!-- NavBar -->
 		<nav class="navbar navbar-expand navbar-light bg-light">
-			<h1 class="navbar-brand">Blood Bank</h1>
+			<!-- <h1 class="navbar-brand">Blood Bank</h1> -->
+			<a class="navbar-brand" href="/admin_home">Blood Bank</a>
 			<ul class="navbar-nav mr-auto">
-				<li class="nav-item active">
+				<li class="nav-item">
 					<a class ="nav-link" href="/admin_home"><h5>Home</h5></a>
 				</li>
 				<li class="nav-item ">
@@ -34,7 +35,7 @@
 				<li class="nav-item ">
 					<a class ="nav-link" href="/add_transaction"><h5>Add H.Transaction</h5></a>
 				</li>
-				<li class="nav-item ">
+				<li class="nav-item active">
 					<a class ="nav-link" href="/view_transaction"><h5>View H.Transactions</h5></a>
 				</li>
 			</ul>

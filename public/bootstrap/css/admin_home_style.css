@@ -1,7 +1,12 @@
+body{
+	background-color: #fdf5e6;
+	font-weight: 500;
+}
 .card{
 	margin-right: 30px;
 	margin-top: 30px;
 	margin-left: 10%;
+	background-color: #f1f1f1;
 }
 span > h5{
 	margin-left: 15px;
@@ -30,4 +35,10 @@ a h5:hover{
 }
 .navbar-nav li.nav-item{
 	margin-right: 40px;
+}
+table.table{
+	box-sizing: border-box;
+		box-shadow: 2px 2px 2px 2px gray;
+	border-style: solid;
+	border-left: 5px;
 }
