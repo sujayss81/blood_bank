@@ -97,6 +97,7 @@ class donorController extends Controller
     	$donor->timestamps = false;
     	$donor->dob = $date;
         $bloodtype = $req->input('bloodtype');
+        $donor->bgroup = $bloodtype;
         switch ($bloodtype) {
             case 'A+':
                 $bloodtype = 1;

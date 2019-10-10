@@ -103,16 +103,8 @@
 					<!-- <div class="row"> -->
 						<label>Blood Group</label>
 						<div class="col-2">
-						<select class="form-control" name="bgroup"> 
+						<select class="form-control" disabled="" name="bgroup"> 
 							<option>{{$item->bgroup}}</option>
-							    <option>A+</option>
-			                    <option>A-</option>
-			                    <option>B+</option>
-			                    <option>B-</option>
-			                    <option>AB+</option>
-			                    <option>AB-</option>
-			                    <option>O+</option>
-			                    <option>O-</option>
 						</select>
 						</div>
 						<label>Address</label>
