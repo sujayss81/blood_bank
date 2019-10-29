@@ -1,8 +1,7 @@
 body{
-	/*background-image: url("https://s2.best-wallpaper.net/wallpaper/1920x1080/1202/Red-blood-cells_1920x1080.jpg");*/
-	/*background-size: 1920px 1090px ;
-	color: white;*/
-	/*background-image: linear-gradient(from left to right, red, yellow,white);*/
+	background-image: url("background.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 div.jumbotron-fluid{
 	margin-bottom: 0px;
@@ -18,6 +17,10 @@ div.jumbotron-fluid h1{
 	font-weight: 400;
 	color: white;
 }
+/*h6{
+	color: black !important;
+	font-weight: 700 !important;
+}*/
 
 nav div button.btn{
 	color:white;
@@ -95,7 +98,10 @@ div div#margin_spacer{
 	margin-bottom: 0px;
 }
 body h6{
-	color: #90949c;
+	color: black;
+}
+label{
+	color: white;
 }
 body textarea.form-control{
 	max-width: 81%;

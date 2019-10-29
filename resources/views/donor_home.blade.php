@@ -73,7 +73,7 @@
 					<div class="card">
 						<div class="card-body">
 							<h5 class="card-title">Donation Rules</h5>
-							<p class="card-text">Lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor</p>
+							<p class="card-text">View Rules to be followed before donation.</p>
 							<a href="/rules" class="btn btn-primary">View Rules</a>
 						</div>
 					</div>
@@ -82,7 +82,7 @@
 					<div class="card">
 						<div class="card-body">
 							<h5 class="card-title">View All Donations</h5>
-							<p class="card-text">Lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor</p>
+							<p class="card-text">View all your donations.</p>
 							<a href="/donor_donation" class="btn btn-primary">View Donations</a>
 						</div>
 					</div>
@@ -111,7 +111,7 @@
 					<div class="card">
 						<div class="card-body">
 							<h5 class="card-title">Update Profile</h5>
-							<p class="card-text">Lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor</p>
+							<p class="card-text">Update your profile.</p>
 							<a href="/donor_update" class="btn btn-primary">Update</a>
 						</div>
 					</div>
@@ -120,7 +120,7 @@
 					<div class="card">
 						<div class="card-body">
 							<h5 class="card-title">Change Password</h5>
-							<p class="card-text">Lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor</p>
+							<p class="card-text">Change your password.</p>
 							<a href="/c_pass" class="btn btn-primary">Change Password</a>
 						</div>
 					</div>

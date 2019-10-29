@@ -48,14 +48,14 @@
 				<div class="card col-4">
 				  <div class="card-body">
 				    <h5 class="card-title">Add donation</h5>
-				    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+				    <p class="card-text">Add the details of new donation made by the registered donor.</p>
 				    <a href="/add_donation" class="btn btn-primary">Add Donation</a>
 				  </div>
 				</div>
 				<div class="card col-4">
 				  <div class="card-body">
 				    <h5 class="card-title">Manage Donors</h5>
-				    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+				    <p class="card-text">Manage details of donors registered.</p>
 				    <a href="/manage_donor" class="btn btn-primary">Manage</a>
 				  </div>
 				</div>
@@ -64,14 +64,14 @@
 				<div class="card col-4">
 				  <div class="card-body">
 				    <h5 class="card-title">View Donations from all donors</h5>
-				    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+				    <p class="card-text">View Details of all the donations made.</p>
 				    <a href="/view_donation" class="btn btn-primary">View Donations</a>
 				  </div>
 				</div>
 				<div class="card col-4">
 				  <div class="card-body">
 				    <h5 class="card-title">View Blood in Blood Bank</h5>
-				    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+				    <p class="card-text">View quantity of blood available in Blood Bank.</p>
 				    <a href="/view_blood" class="btn btn-primary">View Quantity</a>
 				  </div>
 				</div>
@@ -80,14 +80,14 @@
 				<div class="card col-4">
 				  <div class="card-body">
 				    <h5 class="card-title">Add Hospital Transactions</h5>
-				    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+				    <p class="card-text">Add the transaction details for the hospital requesting blood from blood bank.</p>
 				    <a href="/add_transaction" class="btn btn-primary">Add Transaction</a>
 				  </div>
 				</div>
 				<div class="card col-4">
 				  <div class="card-body">
 				    <h5 class="card-title">View Hospital Transactions</h5>
-				    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+				    <p class="card-text">View all the transactions between blood bank and hospital.</p>
 				    <a href="/view_transaction" class="btn btn-primary">View Transaction</a>
 				  </div>
 				</div>
