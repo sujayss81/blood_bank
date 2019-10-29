@@ -57,12 +57,12 @@
 				<li class="nav-item">
 					<a class="nav-link" href="/donor_donation">View Donations</a>
 				</li>
-				<li class="nav-item">
+				<!-- <li class="nav-item">
 					<a class="nav-link" href="#">--</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="#">--</a>
-				</li>
+				</li> -->
 				<li class="nav-item">
 					<a class="nav-link" href="/donor_update">Update Profile</a>
 				</li>

@@ -50,12 +50,12 @@
 				<li class="nav-item">
 					<a class="nav-link" href="/donor_donation" style="color: black">View Donations</a>
 				</li>
-				<li class="nav-item">
+				<!-- <li class="nav-item">
 					<a class="nav-link" href="#">--</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="#">--</a>
-				</li>
+				</li> -->
 				<li class="nav-item">
 					<a class="nav-link" href="/donor_update">Update Profile</a>
 				</li>
@@ -78,7 +78,7 @@
 				<tbody>				
 					<td>{{$item->id}}</td>
 					<td>{{$item->b_group}}</td>
-					<td>{{$item->quantity}}</td>
+					<td>{{$item->quantity}}ml</td>
 					<td>{{$item->d_date}}</td>			
 				</tbody>
 				@endforeach

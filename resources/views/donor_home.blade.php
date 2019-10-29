@@ -46,12 +46,12 @@
 				<li class="nav-item">
 					<a class="nav-link" href="/donor_donation">View Donations</a>
 				</li>
-				<li class="nav-item">
+				<!-- <li class="nav-item">
 					<a class="nav-link" href="#">--</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="#">--</a>
-				</li>
+				</li> -->
 				<li class="nav-item">
 					<a class="nav-link" href="/donor_update">Update Profile</a>
 				</li>
@@ -69,7 +69,7 @@
 					</div>
 			@endif
 			<div class="row top-row">
-				<div class="col-4">
+				<div class="col-6">
 					<div class="card">
 						<div class="card-body">
 							<h5 class="card-title">Donation Rules</h5>
@@ -78,7 +78,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-4">
+				<div class="col-6">
 					<div class="card">
 						<div class="card-body">
 							<h5 class="card-title">View All Donations</h5>
@@ -87,7 +87,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-4">
+				<!-- <div class="col-4">
 					<div class="card">
 						<div class="card-body">
 							<h5 class="card-title">--</h5>
@@ -95,10 +95,10 @@
 							<a href="#" class="btn btn-primary">--</a>
 						</div>
 					</div>
-				</div>
+				</div> -->
 			</div>
 			<div class="row">
-				<div class="col-4">
+				<!-- <div class="col-4">
 					<div class="card">
 						<div class="card-body">
 							<h5 class="card-title">--</h5>
@@ -106,8 +106,8 @@
 							<a href="#" class="btn btn-primary">--</a>
 						</div>
 					</div>
-				</div>
-				<div class="col-4">
+				</div> -->
+				<div class="col-6">
 					<div class="card">
 						<div class="card-body">
 							<h5 class="card-title">Update Profile</h5>
@@ -116,7 +116,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-4">
+				<div class="col-6">
 					<div class="card">
 						<div class="card-body">
 							<h5 class="card-title">Change Password</h5>

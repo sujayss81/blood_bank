@@ -28,7 +28,6 @@
                 </li>
             </ul>
             <div class="btn-group ">
-                <!-- <button class="btn  rounded" type="submit">Register</button> -->
                 <form method="POST" action="/donor_auth"> 
                 @csrf
                 <input type="text" name="username" placeholder="Username">
@@ -42,45 +41,6 @@
             {{ session('status') }}
         </div>
     @endif
-    <!------------------------------------------------------------------------------------->
-  <!--   <div id="carousel-container float-left">
-        <div id="my-slider" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-                    <ol class="carousel-indicators">
-                        <li data-target="#my-slider" data-slide-to="0" class="active"></li>
-                        <li data-target="#my-slider" data-slide-to="1"></li>
-                        <li data-target="#my-slider" data-slide-to="2"></li>
-                    </ol>
-                    <div class="carousel-item active">
-                          <img class="d-block w-100" src=" https://gkdutta.files.wordpress.com/2016/10/happy-national-voluntary-blood-donation-day-2015.jpg?w=1000 " alt="First slide">
-                    </div>
-                    <div class="carousel-item">
-                      <img class="d-block w-100" src="http://blogspay.com/wp-content/uploads/2018/06/blood1-1200x548-1170x534.jpg" alt="Second slide">
-                    </div>
-                    <div class="carousel-item">
-                      <img class="d-block w-100" src="https://s3-ap-northeast-1.amazonaws.com/assets-eaglenews/2018/06/34607760_2511106552248072_8929599705487245312_n.jpg" alt="Third slide">
-                    </div>
-            </div>
-            <a class="carousel-control-prev" href="#my-slider" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#my-slider" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
-        </div>
-    </div> -->
-<!-- ------------------------------------------------------------------------------ -->
-    
-    <!-- <div class="container-fluid col-8 float-left">
-        <img src="https://scx1.b-cdn.net/csz/news/800/2019/4-blood.jpg" width="900" height="600">
-        
-    </div> -->
-
-
-<!-- ------------------------------------------------------------------------------------ -->
-        <!-- <img src="https://scx1.b-cdn.net/csz/news/800/2019/4-blood.jpg" width="900" height="600"> -->
     
     <div class="container-fluid col-4 float-right">
         <form method="POST" action="/register">
@@ -89,30 +49,22 @@
             <h5>Happy donating</h5>
             <div class="form-row">
                 <!-- <div class="col"> -->
-                    <input type="text" name="fname" class="form-control " id="margin_spacer" placeholder="First Name">
+                    <input type="text" name="fname" class="form-control " id="margin_spacer" placeholder="First Name" required="true">
                 <!-- </div> -->
                 <!-- <div class="col"> -->
-                    <input type="text" name="lname" class="form-control " placeholder="Last Name" id="margin_spacer">
+                    <input type="text" name="lname" class="form-control " placeholder="Last Name" id="margin_spacer" required="true">
                 <!-- </div> -->
             </div>
             <!-- <div class="form-row"> -->
                 <!-- <div class="form-col"> -->
-                <textarea  rows="4" cols="30" placeholder="Address" name="address" id="margin_spacer" class="form-control"></textarea>
-                <!-- </div> -->
-            <!-- </div> -->
-            <!-- <div class="form-row"> -->
-                <!-- <div class="form-col"> -->
-                <input type="number" name="contact" placeholder="Mobile Number" id="margin_spacer" class="form-control">
-                <!-- </div> -->
-            <!-- </div> -->
-            <!-- <div class="form-row"> -->
-                <!-- <div class="form-col"> -->
-                <input type="password" name="password" placeholder="New Password" id="margin_spacer" class="form-control">
-                <!-- </div> -->
-            <!-- </div> -->
+                <textarea  rows="4" cols="30" placeholder="Address" name="address" id="margin_spacer" class="form-control" required="true"></textarea>
+
+                <input type="number" name="contact" placeholder="Mobile Number" id="margin_spacer" class="form-control" required="true">
+
+                <input type="password" name="password" placeholder="New Password" id="margin_spacer" class="form-control" required="true">
             <h6>Blood Group</h6>
             <!-- <div class="form-row"> -->
-                <select class="form-control bloodtype" id="margin_spacer" name='bloodtype'>
+                <select class="form-control bloodtype" id="margin_spacer" name='bloodtype' required="true">
                     <option>A+</option>
                     <option>A-</option>
                     <option>B+</option>
@@ -128,7 +80,7 @@
             <div class="form-row" id="margin_spacer">
             <!-- <div id="margin_spacer"> -->
                 <div class="col dob">
-            <select class="form-control dob" name="day">
+            <select class="form-control dob" name="day" required="true">
                 <option>Day</option>
                 <option>1</option>
                 <option>2</option>
@@ -165,7 +117,7 @@
         </div>
             <!-- </div> -->
             <div class="col dob">
-                <select class="form-control dob"  name="month">
+                <select class="form-control dob"  name="month" required>
                     <option>Month</option>
                     <option>Janaury</option>
                     <option>Febraury</option>
@@ -182,7 +134,7 @@
                 </select>
             </div>
             <div class="col dob">
-                <select class="form-control dob"  name="year">
+                <select class="form-control dob"  name="year" required> 
                     <option>Year</option>
                     <option>2019</option>
                     <option>2018</option>
@@ -271,15 +223,15 @@
         <h6>Gender</h6>
         <div id="margin_spacer">
             <!-- <div class="form-col" id="margin_spacer"> -->
-                <input type="radio" name="gender" id="margin_spacer" value="Male">
+                <input type="radio" name="gender" id="margin_spacer" value="Male" required>
                 <label for="male">Male</label>
             <!-- </div> -->
             <!-- <div class="form-col" id="margin_spacer"> -->
-                <input type="radio" name="gender" id="margin_spacer" value="Female">
+                <input type="radio" name="gender" id="margin_spacer" value="Female" required>
                 <label for="female">Female</label>
             <!-- </div> -->
             <!-- <div class="form-col" id="margin_spacer"> -->
-                <input type="radio" name="gender" id="margin_spacer" value="Other">
+                <input type="radio" name="gender" id="margin_spacer" value="Other" required>
                 <label for="other">Other</label>
             <!-- </div> -->
         </div>
