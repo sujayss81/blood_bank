@@ -133,6 +133,9 @@ class adminController extends Controller
         if ($bt_quantity == 0) {
             return redirect('/add_transaction')->with('status','Blood Bank Empty');
         }
+        else if($bt_quantity < $quantity){
+            return redirect('/add_transaction')->with('status','Inadequate amount of blood in blood bank');
+        }
         else
         {
             $bt_quantity -= $quantity;
